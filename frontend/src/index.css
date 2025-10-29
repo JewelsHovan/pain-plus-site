@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@theme {
+  /* Border radius */
+  --radius: 0.5rem;
+
+  /* Art Therapy Plus Custom Colors */
+  --color-primary: hsl(235 59% 34%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(6 48% 83%);
+  --color-secondary-foreground: hsl(0 0% 0%);
+
+  --color-accent: hsl(28 100% 50%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 0%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 0%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 0%);
+
+  --color-muted: hsl(0 0% 96.1%);
+  --color-muted-foreground: hsl(0 0% 45.1%);
+
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --color-border: hsl(0 0% 89.8%);
+  --color-input: hsl(0 0% 89.8%);
+  --color-ring: hsl(235 59% 34%);
+
+  /* Font families */
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Dark mode */
+.dark {
+  --color-background: hsl(0 0% 10%);
+  --color-foreground: hsl(0 0% 98%);
+  --color-card: hsl(0 0% 15%);
+  --color-card-foreground: hsl(0 0% 98%);
+  --color-popover: hsl(0 0% 15%);
+  --color-popover-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(0 0% 20%);
+  --color-muted-foreground: hsl(0 0% 60%);
+  --color-border: hsl(0 0% 25%);
+  --color-input: hsl(0 0% 25%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
