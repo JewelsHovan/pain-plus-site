@@ -1,8 +1,8 @@
 export const SITE_INFO = {
-  name: 'Art Therapy Plus',
+  name: 'Pain+',
   tagline: 'Transforming Mental Wellness Through Art',
   subtitle: 'AI-Powered Art Therapy Platform',
-  email: 'contact@arttherapyplus.com',
+  email: 'contact@painplus.com',
   phone: '(555) 123-4567',
   location: 'San Francisco, CA',
 } as const;
@@ -84,7 +84,7 @@ export const ABOUT_CONTENT = {
   mission: {
     title: 'Our Mission',
     content:
-      'At Art Therapy Plus, we believe in democratizing access to quality art therapy through innovative AI-powered tools. Our mission is to empower therapists and individuals to harness the transformative power of creative expression for mental wellness.',
+      'At Pain+, we believe in democratizing access to quality art therapy through innovative AI-powered tools. Our mission is to empower therapists and individuals to harness the transformative power of creative expression for mental wellness.',
   },
   vision: {
     title: 'Our Vision',
@@ -122,7 +122,7 @@ export const ABOUT_CONTENT = {
 export const CONTACT_CONTENT = {
   hero: {
     title: 'Request a Demo',
-    subtitle: 'Get in touch to learn how Art Therapy Plus can transform your practice',
+    subtitle: 'Get in touch to learn how Pain+ can transform your practice',
   },
   form: {
     title: 'Send us a message',

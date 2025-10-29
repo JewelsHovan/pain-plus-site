@@ -6,7 +6,7 @@ export * from './routes';
 export * from './content';
 export * from './articles';
 
-export const APP_NAME = 'Art Therapy Plus';
+export const APP_NAME = 'Pain+';
 
 export const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
