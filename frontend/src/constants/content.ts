@@ -102,19 +102,19 @@ export const ABOUT_CONTENT = {
   },
   team: [
     {
-      name: 'Dr. Sarah Chen',
+      name: 'Hannah Derue',
       role: 'Founder & CEO',
-      bio: 'Licensed art therapist with 15+ years of experience in clinical practice and mental health technology.',
+      bio: 'Visionary leader passionate about transforming mental healthcare through innovative art therapy solutions.',
     },
     {
-      name: 'Dr. Michael Rodriguez',
-      role: 'Chief Clinical Officer',
-      bio: 'Board-certified psychiatrist specializing in integrative approaches to mental wellness.',
+      name: 'Julien Hovan',
+      role: 'Co-founder & Lead Software Developer',
+      bio: 'Full-stack developer dedicated to building intuitive and impactful healthcare technology platforms.',
     },
     {
-      name: 'Emily Thompson',
-      role: 'Head of Technology',
-      bio: 'AI/ML engineer passionate about applying technology to solve healthcare challenges.',
+      name: 'Patrick Chen',
+      role: 'Co-founder & QA Engineer',
+      bio: 'Quality assurance specialist ensuring excellence and reliability in every aspect of the platform.',
     },
   ],
 } as const;
