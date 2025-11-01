@@ -1,4 +1,3 @@
-import { PageHero } from '@/components/common/PageHero';
 import { ProcessStep } from '@/components/how-it-works/ProcessStep';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -7,11 +6,6 @@ import { HOW_IT_WORKS_CONTENT, ROUTES } from '@/constants';
 export function HowItWorks() {
   return (
     <div className="snap-scroll-page">
-      <PageHero
-        title={HOW_IT_WORKS_CONTENT.hero.title}
-        subtitle={HOW_IT_WORKS_CONTENT.hero.subtitle}
-      />
-
       {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
         <section
           key={step.number}

@@ -1,4 +1,3 @@
-import { PageHero } from '@/components/common/PageHero';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { ContactInfo } from '@/components/contact/ContactInfo';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,11 +7,6 @@ import { CONTACT_CONTENT } from '@/constants';
 export function Contact() {
   return (
     <div>
-      <PageHero
-        title={CONTACT_CONTENT.hero.title}
-        subtitle={CONTACT_CONTENT.hero.subtitle}
-      />
-
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto space-y-16">

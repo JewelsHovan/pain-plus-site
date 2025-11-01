@@ -1,4 +1,3 @@
-import { PageHero } from '@/components/common/PageHero';
 import { TeamMember } from '@/components/about/TeamMember';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, BookOpen, Video } from 'lucide-react';
@@ -7,11 +6,6 @@ import { ABOUT_CONTENT } from '@/constants';
 export function About() {
   return (
     <div className="snap-scroll-page">
-      <PageHero
-        title={ABOUT_CONTENT.hero.title}
-        subtitle={ABOUT_CONTENT.hero.subtitle}
-      />
-
       {/* Our Story Section */}
       <section className="snap-section snap-section-full bg-muted/20 flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

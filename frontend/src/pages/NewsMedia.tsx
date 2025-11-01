@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { PageHero } from '@/components/common/PageHero';
 import { FilterBar } from '@/components/news/FilterBar';
 import { ArticleCard } from '@/components/news/ArticleCard';
 import { ArticleSkeleton } from '@/components/news/ArticleSkeleton';
@@ -34,8 +33,6 @@ export function NewsMedia() {
 
   return (
     <div>
-      <PageHero title="News & Media" />
-
       <section className="py-8 md:py-12 bg-background border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FilterBar activeFilter={activeFilter} onFilterChange={handleFilterChange} />
