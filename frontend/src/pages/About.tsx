@@ -59,8 +59,8 @@ export function About() {
         </div>
       </section>
 
-      {/* Team Section - Normal Scroll */}
-      <section className="py-16 md:py-24 bg-muted/20">
+      {/* Team Section */}
+      <section className="snap-section py-16 md:py-24 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -88,7 +88,7 @@ export function About() {
       </section>
 
       {/* Collaborations Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="snap-section py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
