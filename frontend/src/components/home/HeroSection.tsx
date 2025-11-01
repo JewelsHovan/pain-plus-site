@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative snap-section snap-section-full bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground overflow-hidden flex items-center justify-center">
+    <section className="relative snap-section snap-section-full text-primary-foreground overflow-hidden flex items-center justify-center">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
