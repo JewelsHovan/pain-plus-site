@@ -6,28 +6,32 @@ import { HOW_IT_WORKS_CONTENT, ROUTES } from '@/constants';
 
 export function HowItWorks() {
   return (
-    <div>
+    <div className="snap-scroll-page">
       <PageHero
         title={HOW_IT_WORKS_CONTENT.hero.title}
         subtitle={HOW_IT_WORKS_CONTENT.hero.subtitle}
       />
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
+      {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
+        <section
+          key={step.number}
+          className={`snap-section snap-section-full flex items-center justify-center ${
+            index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
+          }`}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ProcessStep
-              key={step.number}
               number={step.number}
               title={step.title}
               description={step.description}
               icon={step.icon}
               imagePosition={index % 2 === 0 ? 'right' : 'left'}
             />
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="snap-section snap-section-full bg-muted/30 flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             {HOW_IT_WORKS_CONTENT.cta.title}
