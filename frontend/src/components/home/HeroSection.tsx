@@ -7,25 +7,26 @@ import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="relative snap-section snap-section-full bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground overflow-hidden flex items-center justify-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            {HOME_CONTENT.hero.title}
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl mb-8 text-primary-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
-            {HOME_CONTENT.hero.subtitle}
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold text-lg px-8 py-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300"
-          >
-            <Link to={ROUTES.CONTACT} className="inline-flex items-center gap-2">
-              {HOME_CONTENT.hero.cta}
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </Button>
-        </div>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
+        style={{ backgroundImage: 'url(/Hero_img.png)' }}
+      />
+
+      {/* Optional overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-transparent" />
+
+      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-10">
+        <Button
+          asChild
+          size="lg"
+          className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold text-lg px-8 py-6 animate-in fade-in slide-in-from-bottom-4 duration-1000"
+        >
+          <Link to={ROUTES.CONTACT} className="inline-flex items-center gap-2">
+            {HOME_CONTENT.hero.cta}
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </Button>
       </div>
       <WaveDivider color="#FFFFFF" />
     </section>
