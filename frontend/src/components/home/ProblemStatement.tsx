@@ -3,7 +3,7 @@ import { HOME_CONTENT } from '@/constants';
 
 export function ProblemStatement() {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="snap-section snap-section-full bg-muted/30 flex items-center justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary/30 mb-6">

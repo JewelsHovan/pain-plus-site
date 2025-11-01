@@ -4,7 +4,7 @@ import { FeaturesSection } from '@/components/home/FeaturesSection';
 
 export function Home() {
   return (
-    <div>
+    <div className="snap-scroll-page">
       <HeroSection />
       <ProblemStatement />
       <FeaturesSection />

@@ -1,55 +1,61 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
 
 @theme {
   /* Border radius */
   --radius: 0.5rem;
 
-  /* Art Therapy Plus Custom Colors */
-  --color-primary: hsl(235 59% 34%);
+  /* PAin+ Brand Colors - Inspired by brain imagery gradient */
+  /* Primary: Deep Purple/Magenta from brand image */
+  --color-primary: hsl(280 45% 35%);
   --color-primary-foreground: hsl(0 0% 100%);
 
-  --color-secondary: hsl(6 48% 83%);
+  /* Secondary: Coral/Pink accent from brain image */
+  --color-secondary: hsl(15 85% 75%);
   --color-secondary-foreground: hsl(0 0% 0%);
 
-  --color-accent: hsl(28 100% 50%);
+  /* Accent: Vibrant Orange from brand palette */
+  --color-accent: hsl(25 100% 55%);
   --color-accent-foreground: hsl(0 0% 100%);
 
+  /* Additional brand color: Blue from brain circuit pattern */
+  --color-brand-blue: hsl(235 60% 55%);
+
   --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(0 0% 0%);
+  --color-foreground: hsl(0 0% 10%);
 
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(0 0% 0%);
+  --color-card-foreground: hsl(0 0% 10%);
 
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(0 0% 0%);
+  --color-popover-foreground: hsl(0 0% 10%);
 
-  --color-muted: hsl(0 0% 96.1%);
-  --color-muted-foreground: hsl(0 0% 45.1%);
+  --color-muted: hsl(280 20% 96%);
+  --color-muted-foreground: hsl(280 10% 45%);
 
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(0 0% 98%);
 
-  --color-border: hsl(0 0% 89.8%);
-  --color-input: hsl(0 0% 89.8%);
-  --color-ring: hsl(235 59% 34%);
+  --color-border: hsl(280 15% 90%);
+  --color-input: hsl(280 15% 90%);
+  --color-ring: hsl(280 45% 35%);
 
   /* Font families */
   --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Dark mode */
+/* Dark mode - Deep purple gradient inspired theme */
 .dark {
-  --color-background: hsl(0 0% 10%);
+  --color-background: hsl(280 30% 8%);
   --color-foreground: hsl(0 0% 98%);
-  --color-card: hsl(0 0% 15%);
+  --color-card: hsl(280 25% 12%);
   --color-card-foreground: hsl(0 0% 98%);
-  --color-popover: hsl(0 0% 15%);
+  --color-popover: hsl(280 25% 12%);
   --color-popover-foreground: hsl(0 0% 98%);
-  --color-muted: hsl(0 0% 20%);
-  --color-muted-foreground: hsl(0 0% 60%);
-  --color-border: hsl(0 0% 25%);
-  --color-input: hsl(0 0% 25%);
+  --color-muted: hsl(280 20% 18%);
+  --color-muted-foreground: hsl(280 10% 65%);
+  --color-border: hsl(280 20% 22%);
+  --color-input: hsl(280 20% 22%);
 }
 
 @layer base {
@@ -59,6 +65,11 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Apply snap scroll to pages with .snap-scroll-page class */
+  html:has(.snap-scroll-page) {
+    scroll-snap-type: y mandatory;
   }
 
   body {
@@ -78,5 +89,34 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Snap Scroll Utilities */
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  /* Full viewport sections accounting for header */
+  .snap-section-full {
+    min-height: 100vh;
+    padding-top: 4rem; /* 64px header on mobile */
+  }
+
+  @media (min-width: 768px) {
+    .snap-section-full {
+      padding-top: 5rem; /* 80px header on desktop */
+    }
+  }
+
+  /* Disable snap scroll on mobile for better UX */
+  @media (max-width: 767px) {
+    html:has(.snap-scroll-page) {
+      scroll-snap-type: none;
+    }
+
+    .snap-section-full {
+      min-height: auto;
+    }
   }
 }

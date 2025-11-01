@@ -6,8 +6,8 @@ import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <section className="relative snap-section snap-section-full bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground overflow-hidden flex items-center justify-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             {HOME_CONTENT.hero.title}
