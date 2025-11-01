@@ -32,7 +32,7 @@ export function NewsMedia() {
   };
 
   return (
-    <div>
+    <div className="pt-16 md:pt-20">
       <section className="py-8 md:py-12 bg-background border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FilterBar activeFilter={activeFilter} onFilterChange={handleFilterChange} />
