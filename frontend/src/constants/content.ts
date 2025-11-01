@@ -1,10 +1,11 @@
 export const SITE_INFO = {
-  name: 'Pain+',
-  tagline: 'Transforming Mental Wellness Through Art',
-  subtitle: 'AI-Powered Art Therapy Platform',
-  email: 'contact@painplus.com',
-  phone: '(555) 123-4567',
-  location: 'San Francisco, CA',
+  name: 'PAin+',
+  tagline: 'Redefining how the world treats and communicates about chronic pain',
+  subtitle: 'Evidence-based, emotionally intelligent tools for chronic pain management',
+  email: 'hannah.derue@mcgill.ca',
+  phone: '',
+  location: 'Montreal, QC',
+  linkedin: 'https://www.linkedin.com/company/painplus',
 } as const;
 
 export const HOME_CONTENT = {
@@ -79,50 +80,80 @@ export const HOW_IT_WORKS_CONTENT = {
 export const ABOUT_CONTENT = {
   hero: {
     title: 'About Us',
-    subtitle: 'Pioneering the future of mental wellness through creative expression',
+    subtitle: 'From pain research to real-world relief – powered by the voices of those with lived experience',
+  },
+  story: {
+    title: 'Our Story',
+    content:
+      'Based on her own experience living with chronic migraines and pelvic pain, founder Hannah Derue (PhD Candidate in Neuroscience at McGill University) founded PAin+. PAin+ is a software program that translates decades of pain science into accessible digital tools that help people better understand, express, and manage their pain. Our company prioritizes the voices of members of the chronic pain community, positioning them as leaders in our future direction. PAin+ sits at the intersection of art, neuroscience, and machine learning, transforming how chronic pain information is communicated, interpreted, and treated — from the research bench to the bedside.',
   },
   mission: {
-    title: 'Our Mission',
+    title: 'Mission Statement',
     content:
-      'At Pain+, we believe in democratizing access to quality art therapy through innovative AI-powered tools. Our mission is to empower therapists and individuals to harness the transformative power of creative expression for mental wellness.',
-  },
-  vision: {
-    title: 'Our Vision',
-    content:
-      'We envision a world where everyone has access to personalized, effective art therapy that adapts to their unique needs and promotes lasting mental health outcomes.',
-  },
-  values: {
-    title: 'Our Values',
-    items: [
-      'Innovation in therapeutic technology',
-      'Accessibility for all',
-      'Evidence-based approaches',
-      'Human-centered design',
+      'At PAin+, we aim to redefine how the world treats and communicates about chronic pain. Our mission is to empower individuals and clinicians through evidence-based, emotionally intelligent tools that make the invisible experience of pain both visible and actionable.',
+    belief:
+      'We believe that effective pain management begins with effective communication — and that enhanced communication promotes:',
+    benefits: [
+      'Clinically proven beneficial mindfulness practices',
+      'More informed clinician decision making',
     ],
+  },
+  teamIntro: {
+    title: 'Our Team',
+    subtitle:
+      'The scientific evidence is overwhelming – Chronic pain management at its finest is interdisciplinary.',
+    description:
+      'Our team is built around this concept – with core team members sharing expertise in fundamental neuroscience, clinical pain management, mental health, user experience design, and machine learning.',
   },
   team: [
     {
       name: 'Hannah Derue',
       role: 'Founder & CEO',
-      bio: 'Visionary leader passionate about transforming mental healthcare through innovative art therapy solutions.',
+      education: 'PhD Candidate in Neuroscience, McGill University',
+      bio: 'Founder of PAin+ with lived experience of chronic migraines and pelvic pain. Translating pain science into accessible digital tools.',
+      funFact: '',
     },
     {
       name: 'Julien Hovan',
-      role: 'Co-founder & Lead Software Developer',
-      bio: 'Full-stack developer dedicated to building intuitive and impactful healthcare technology platforms.',
+      role: 'Lead Software Developer',
+      education: '',
+      bio: 'Add description here',
+      funFact: '',
     },
     {
       name: 'Patrick Chen',
-      role: 'Co-founder & QA Engineer',
-      bio: 'Quality assurance specialist ensuring excellence and reliability in every aspect of the platform.',
+      role: 'Team Member',
+      education: '',
+      bio: 'Add description here',
+      funFact: '',
+    },
+    {
+      name: 'Georges Chartrand',
+      role: 'Team Member',
+      education: '',
+      bio: 'Add description here',
+      funFact: '',
     },
   ],
+  collaboration: {
+    title: 'Collaborations',
+    subtitle: 'In partnership with',
+    partner: {
+      name: 'The National Gallery of Art',
+      tagline: 'Creative expression as a vehicle for shared understanding',
+      description:
+        'Through a unique collaboration with the National Gallery of Art, we integrate visual storytelling and emotional interpretation into our pain management platform. Together, we explore how creative expression can become a form of therapy, insight, and connection.',
+      videoPlaceholder: true,
+      disclaimer:
+        'The National Gallery of Art offers open access resources for research and development but does not endorse or promote products that may arise from the use of open access artworks from their gallery.',
+    },
+  },
 } as const;
 
 export const CONTACT_CONTENT = {
   hero: {
-    title: 'Request a Demo',
-    subtitle: 'Get in touch to learn how Pain+ can transform your practice',
+    title: 'Contact',
+    subtitle: 'We\'re building the future of pain care — join us.',
   },
   form: {
     title: 'Send us a message',
@@ -134,10 +165,12 @@ export const CONTACT_CONTENT = {
       message: 'Message',
     },
     roles: [
-      'Therapist',
-      'Healthcare Administrator',
+      'Clinician',
       'Researcher',
-      'Student',
+      'Patient/Individual',
+      'Healthcare Administrator',
+      'Media/Press',
+      'Partner Organization',
       'Other',
     ],
     submit: 'Send Message',
@@ -148,5 +181,11 @@ export const CONTACT_CONTENT = {
     email: SITE_INFO.email,
     phone: SITE_INFO.phone,
     location: SITE_INFO.location,
+    linkedin: SITE_INFO.linkedin,
+  },
+  partnerships: {
+    title: 'Media & Partnerships',
+    description: 'For collaborations, partnerships, or press inquiries, please reach out to:',
+    email: SITE_INFO.email,
   },
 } as const;

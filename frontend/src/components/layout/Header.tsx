@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { DarkModeToggle } from '@/components/common/DarkModeToggle';
+import { Logo } from '@/components/common/Logo';
 import { NAV_LINKS, ROUTES } from '@/constants';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -20,17 +21,15 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b transition-all duration-300 ${
-        isScrolled ? 'border-border' : 'border-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b transition-all duration-300 ${
+        isScrolled ? 'border-border shadow-sm' : 'border-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo - Icon Only */}
-          <Link to={ROUTES.HOME} className="flex items-center group">
-            <div className="w-9 h-9 bg-secondary rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-xl font-bold text-primary">p+</span>
-            </div>
+        <div className="flex items-center justify-between h-16 md:h-18">
+          {/* Logo with Text */}
+          <Link to={ROUTES.HOME} className="flex items-center group transition-transform hover:scale-105">
+            <Logo showText={true} />
           </Link>
 
           {/* Desktop Navigation - Centered */}
