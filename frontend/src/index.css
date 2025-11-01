@@ -92,7 +92,14 @@
   }
 
   /* Snap Scroll Utilities */
-  .snap-section {
+  /* Only apply snap behavior inside snap-scroll-page containers */
+  .snap-scroll-page .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  /* Make footer a snap point only on pages with snap scrolling */
+  html:has(.snap-scroll-page) footer {
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
