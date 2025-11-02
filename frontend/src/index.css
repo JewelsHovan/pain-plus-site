@@ -107,7 +107,7 @@
   /* Full viewport sections accounting for header */
   .snap-section-full {
     min-height: 100vh;
-    padding-top: 4rem; /* 64px header on mobile */
+    padding-top: 5rem; /* 80px to clear fixed header on mobile */
   }
 
   @media (min-width: 768px) {
@@ -122,8 +122,10 @@
       scroll-snap-type: none;
     }
 
+    /* Keep minimum heights on mobile but allow overflow */
     .snap-section-full {
-      min-height: auto;
+      min-height: 60svh; /* 60% viewport height for mobile */
+      padding-bottom: 2rem;
     }
   }
 }

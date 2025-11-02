@@ -16,15 +16,15 @@ export function HeroSection() {
       {/* Optional overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-transparent" />
 
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-16 sm:bottom-32 left-1/2 -translate-x-1/2 z-10 px-4">
         <Button
           asChild
           size="lg"
-          className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold text-lg px-8 py-6 animate-in fade-in slide-in-from-bottom-4 duration-1000"
+          className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 animate-in fade-in slide-in-from-bottom-4 duration-1000"
         >
           <Link to={ROUTES.CONTACT} className="inline-flex items-center gap-2">
             {HOME_CONTENT.hero.cta}
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </Button>
       </div>

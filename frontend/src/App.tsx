@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainLayout } from '@/layouts';
 import { Home, About, HowItWorks, NewsMedia, Contact, NotFound } from '@/pages';
+import { ScrollToTop } from '@/components/common';
 import { ROUTES } from '@/constants';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path={ROUTES.HOME} element={<Home />} />
