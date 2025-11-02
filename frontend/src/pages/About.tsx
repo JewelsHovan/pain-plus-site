@@ -88,37 +88,22 @@ export function About() {
         </div>
       </section>
 
-      {/* Decorative Wave Divider */}
-      <div className="relative h-24 bg-gradient-to-br from-primary/5 via-background to-secondary/10">
-        <svg
-          className="absolute bottom-0 w-full h-24"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          fill="currentColor"
-        >
-          <path
-            d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z"
-            className="text-muted/20"
-          />
-        </svg>
-      </div>
-
       {/* Team Section */}
-      <section className="snap-section py-16 md:py-24 bg-muted/20">
+      <section className="snap-section snap-section-full pt-24 pb-12 md:pt-32 md:pb-16 bg-muted/20 flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">
               {ABOUT_CONTENT.teamIntro.title}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
               {ABOUT_CONTENT.teamIntro.subtitle}
             </p>
-            <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
               {ABOUT_CONTENT.teamIntro.description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
             {ABOUT_CONTENT.team.map((member, index) => (
               <div
                 key={index}
@@ -137,47 +122,47 @@ export function About() {
       </section>
 
       {/* Collaborations Section */}
-      <section className="snap-section py-16 md:py-24 bg-gradient-to-br from-background via-secondary/5 to-background">
+      <section className="snap-section snap-section-full pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-background via-secondary/5 to-background flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+            <div className="text-center mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
                 {ABOUT_CONTENT.collaboration.title}
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 {ABOUT_CONTENT.collaboration.subtitle}
               </p>
             </div>
 
             <Card className="border-2 hover:border-primary/30 transition-all duration-500 shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-200">
-              <CardContent className="p-8 md:p-10">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/30 mb-4">
-                    <Video className="w-8 h-8 text-primary" />
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-secondary/30 mb-3">
+                    <Video className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                     {ABOUT_CONTENT.collaboration.partner.name}
                   </h3>
-                  <p className="text-lg text-primary font-medium italic">
+                  <p className="text-base sm:text-lg text-primary font-medium italic">
                     {ABOUT_CONTENT.collaboration.partner.tagline}
                   </p>
                 </div>
 
-                <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                   {ABOUT_CONTENT.collaboration.partner.description}
                 </p>
 
                 {/* Video Placeholder */}
                 {ABOUT_CONTENT.collaboration.partner.videoPlaceholder && (
-                  <div className="aspect-video bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
+                  <div className="w-full h-48 sm:h-56 md:h-64 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
                     <div className="text-center">
-                      <div className="w-20 h-20 rounded-full bg-background/80 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                        <Video className="w-10 h-10 text-primary" />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-background/80 flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <Video className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
                       </div>
-                      <p className="text-muted-foreground font-medium">
+                      <p className="text-sm sm:text-base text-muted-foreground font-medium">
                         NGA Collaboration Video
                       </p>
-                      <p className="text-sm text-muted-foreground/70">
+                      <p className="text-xs sm:text-sm text-muted-foreground/70">
                         Coming Soon
                       </p>
                     </div>
@@ -185,8 +170,8 @@ export function About() {
                 )}
 
                 {/* Disclaimer */}
-                <div className="bg-muted/30 rounded-lg p-6 border-l-4 border-primary/50">
-                  <p className="text-sm text-muted-foreground italic leading-relaxed">
+                <div className="bg-muted/30 rounded-lg p-4 sm:p-6 border-l-4 border-primary/50">
+                  <p className="text-xs sm:text-sm text-muted-foreground italic leading-relaxed">
                     {ABOUT_CONTENT.collaboration.partner.disclaimer}
                   </p>
                 </div>
