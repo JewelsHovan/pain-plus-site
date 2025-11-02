@@ -8,20 +8,20 @@ export function About() {
     <div className="snap-scroll-page">
       {/* Our Story Section */}
       <section className="snap-section snap-section-full bg-gradient-to-br from-muted/30 via-background to-muted/20 flex items-center justify-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-12 items-center">
               {/* Text Content */}
-              <div className="space-y-6 animate-in fade-in slide-in-from-left duration-700">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-secondary/30 flex-shrink-0">
-                    <BookOpen className="w-8 h-8 text-primary" />
+              <div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-left duration-700">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-secondary/30 flex-shrink-0">
+                    <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground">
                     {ABOUT_CONTENT.story.title}
                   </h2>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   {ABOUT_CONTENT.story.content}
                 </p>
               </div>

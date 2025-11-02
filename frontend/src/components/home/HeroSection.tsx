@@ -9,7 +9,7 @@ export function HeroSection() {
     <section className="relative snap-section snap-section-full text-primary-foreground overflow-hidden flex items-center justify-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover lg:bg-contain bg-center bg-no-repeat opacity-90"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
         style={{ backgroundImage: 'url(/Hero_img.png)' }}
       />
 
