@@ -2,9 +2,11 @@ import { ContactForm } from '@/components/contact/ContactForm';
 import { ContactInfo } from '@/components/contact/ContactInfo';
 import { Card, CardContent } from '@/components/ui/card';
 import { Handshake } from 'lucide-react';
-import { CONTACT_CONTENT } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 export function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="pt-16 md:pt-20">
       <section className="py-16 md:py-24 bg-background">
@@ -12,7 +14,7 @@ export function Contact() {
           <div className="max-w-6xl mx-auto space-y-16">
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                {CONTACT_CONTENT.form.title}
+                {t('contact.form.title')}
               </h2>
             </div>
 
@@ -20,7 +22,7 @@ export function Contact() {
 
             <div className="pt-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-8">
-                {CONTACT_CONTENT.info.title}
+                {t('contact.info.title')}
               </h2>
               <ContactInfo />
             </div>
@@ -33,16 +35,16 @@ export function Contact() {
                     <Handshake className="w-7 h-7 text-primary" />
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-                    {CONTACT_CONTENT.partnerships.title}
+                    {t('contact.partnerships.title')}
                   </h2>
                   <p className="text-muted-foreground mb-4 text-lg">
-                    {CONTACT_CONTENT.partnerships.description}
+                    {t('contact.partnerships.description')}
                   </p>
                   <a
-                    href={`mailto:${CONTACT_CONTENT.partnerships.email}`}
+                    href={`mailto:${t('contact.partnerships.email')}`}
                     className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
                   >
-                    {CONTACT_CONTENT.partnerships.email}
+                    {t('contact.partnerships.email')}
                   </a>
                 </CardContent>
               </Card>

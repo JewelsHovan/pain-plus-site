@@ -1,13 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { DarkModeToggle } from '@/components/common/DarkModeToggle';
+import { LanguageToggle } from '@/components/common/LanguageToggle';
 import { Logo } from '@/components/common/Logo';
 import { NAV_LINKS, ROUTES } from '@/constants';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Header() {
   const location = useLocation();
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,8 +37,9 @@ export function Header() {
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            {NAV_LINKS.map((link) => {
+            {NAV_LINKS.map((link, index) => {
               const isActive = location.pathname === link.path;
+              const navKeys = ['home', 'howItWorks', 'about', 'newsMedia'];
               return (
                 <Link
                   key={link.path}
@@ -44,7 +48,7 @@ export function Header() {
                     isActive ? 'text-primary' : 'text-foreground'
                   }`}
                 >
-                  {link.label}
+                  {t(`common.nav.${navKeys[index]}`)}
                   {isActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
@@ -53,14 +57,17 @@ export function Header() {
             })}
           </nav>
 
-          {/* CTA Button & Dark Mode */}
+          {/* CTA Button, Language & Dark Mode */}
           <div className="hidden md:flex items-center gap-3">
+            <LanguageToggle />
             <DarkModeToggle />
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-5"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-5 w-[180px]"
             >
-              <Link to={ROUTES.CONTACT}>Request a Demo</Link>
+              <Link to={ROUTES.CONTACT} className="inline-flex items-center justify-center">
+                {t('howItWorks.cta.button')}
+              </Link>
             </Button>
           </div>
 
@@ -78,8 +85,9 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col gap-4">
-              {NAV_LINKS.map((link) => {
+              {NAV_LINKS.map((link, index) => {
                 const isActive = location.pathname === link.path;
+                const navKeys = ['home', 'howItWorks', 'about', 'newsMedia'];
                 return (
                   <Link
                     key={link.path}
@@ -89,16 +97,19 @@ export function Header() {
                       isActive ? 'text-primary' : 'text-foreground'
                     }`}
                   >
-                    {link.label}
+                    {t(`common.nav.${navKeys[index]}`)}
                   </Link>
                 );
               })}
+              <div className="flex items-center gap-2 pt-2">
+                <LanguageToggle />
+              </div>
               <Button
                 asChild
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium w-full mt-2 rounded-full"
               >
                 <Link to={ROUTES.CONTACT} onClick={() => setIsMobileMenuOpen(false)}>
-                  Request a Demo
+                  {t('howItWorks.cta.button')}
                 </Link>
               </Button>
             </nav>

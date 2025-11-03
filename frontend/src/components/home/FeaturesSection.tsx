@@ -1,6 +1,6 @@
 import { Users, Target, Sparkles, BarChart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { HOME_CONTENT } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 const iconMap = {
   Users: Users,
@@ -10,20 +10,27 @@ const iconMap = {
 };
 
 export function FeaturesSection() {
+  const { t } = useTranslation();
+  const features = t('home.features.items', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+
   return (
     <section className="snap-section snap-section-full bg-background flex items-center justify-center min-h-[600px] sm:min-h-screen py-16 sm:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why Art Therapy Plus?
+            {t('home.features.sectionTitle')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Empowering therapists and clients with AI-powered tools for better outcomes
+            {t('home.features.sectionSubtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {HOME_CONTENT.features.map((feature, index) => {
+          {features.map((feature, index) => {
             const Icon = iconMap[feature.icon as keyof typeof iconMap];
             return (
               <Card

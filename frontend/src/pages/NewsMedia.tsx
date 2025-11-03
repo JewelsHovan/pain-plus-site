@@ -3,17 +3,28 @@ import { FilterBar } from '@/components/news/FilterBar';
 import { ArticleCard } from '@/components/news/ArticleCard';
 import { ArticleSkeleton } from '@/components/news/ArticleSkeleton';
 import { Button } from '@/components/ui/button';
-import { ARTICLES } from '@/constants/articles';
+import { useTranslation } from 'react-i18next';
 
 export function NewsMedia() {
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState('All');
   const [displayCount, setDisplayCount] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
 
+  const articles = t('newsMedia.articles', { returnObjects: true }) as Array<{
+    id: string;
+    title: string;
+    category: 'Blog' | 'News' | 'Media';
+    date: string;
+    excerpt: string;
+    logoColor: string;
+    url?: string;
+  }>;
+
   const filteredArticles =
     activeFilter === 'All'
-      ? ARTICLES
-      : ARTICLES.filter((article) => article.category === activeFilter);
+      ? articles
+      : articles.filter((article) => article.category === activeFilter);
 
   const displayedArticles = filteredArticles.slice(0, displayCount);
   const hasMore = displayCount < filteredArticles.length;
@@ -58,7 +69,7 @@ export function NewsMedia() {
                   onClick={handleLoadMore}
                   className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold"
                 >
-                  Load More Articles
+                  {t('newsMedia.loadMore')}
                 </Button>
               </div>
             )}
