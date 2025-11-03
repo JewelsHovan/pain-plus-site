@@ -112,13 +112,15 @@ export const ABOUT_CONTENT = {
       education: 'PhD Candidate in Neuroscience, McGill University',
       bio: 'Founder of PAin+ with lived experience of chronic migraines and pelvic pain. Translating pain science into accessible digital tools.',
       funFact: '',
+      image: '/Hannah.jpg',
     },
     {
       name: 'Julien Hovan',
       role: 'Lead Software Developer',
       education: '',
-      bio: 'Add description here',
+      bio: 'Experience in Software and AI Engineering, loves NLP research and LLM Engineering.',
       funFact: '',
+      image: '/Julien_headshot.png',
     },
     {
       name: 'Patrick Chen',
@@ -126,6 +128,7 @@ export const ABOUT_CONTENT = {
       education: '',
       bio: 'Add description here',
       funFact: '',
+      image: '',
     },
     {
       name: 'Georges Chartrand',
@@ -133,6 +136,7 @@ export const ABOUT_CONTENT = {
       education: '',
       bio: 'Add description here',
       funFact: '',
+      image: '',
     },
   ],
   collaboration: {
