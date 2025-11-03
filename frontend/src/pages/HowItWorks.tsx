@@ -6,6 +6,54 @@ import { HOW_IT_WORKS_CONTENT, ROUTES } from '@/constants';
 export function HowItWorks() {
   return (
     <div className="snap-scroll-page">
+      {/* Video Section */}
+      <section className="snap-section snap-section-full bg-gradient-to-br from-primary/5 via-background to-secondary/10 relative overflow-hidden flex items-center justify-center">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Header - Icon and Title on same row */}
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
+              <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex-shrink-0">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+                See PAin+ in Action
+              </h2>
+            </div>
+
+            {/* Video Container */}
+            <div className="animate-in fade-in slide-in-from-bottom duration-700 delay-200 mb-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/10 bg-gradient-to-br from-muted/50 to-background">
+                <video
+                  className="w-full h-auto"
+                  controls
+                  preload="metadata"
+                >
+                  <source src={import.meta.env.VITE_VIDEO_URL || "https://your-azure-storage.blob.core.windows.net/videos/Video_F2025.mp4"} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {/* Decorative corner accents */}
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-full blur-3xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
+              </div>
+            </div>
+
+            {/* Description below video */}
+            <div className="text-center animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Watch how our platform transforms chronic pain management through innovative digital tools and evidence-based approaches
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
         <section
           key={step.number}
@@ -20,6 +68,8 @@ export function HowItWorks() {
               description={step.description}
               icon={step.icon}
               imagePosition={index % 2 === 0 ? 'right' : 'left'}
+              image={'image' in step ? step.image : undefined}
+              images={'images' in step ? step.images : undefined}
             />
           </div>
         </section>

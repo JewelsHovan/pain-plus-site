@@ -39,3 +39,6 @@ out
 
 # TypeScript
 *.tsbuildinfo
+
+# Large video files (hosted on Azure)
+*.mp4

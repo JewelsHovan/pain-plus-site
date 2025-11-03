@@ -5,9 +5,20 @@ export interface Article {
   date: string;
   excerpt: string;
   logoColor: string;
+  url?: string;
 }
 
 export const ARTICLES: Article[] = [
+  {
+    id: '4',
+    title: 'McGill researcher teams up with U.S. art museum to enhance understanding of chronic pain',
+    category: 'Media',
+    date: 'October 30, 2025',
+    excerpt:
+      'Hannah Derue partners with the National Gallery of Art to develop PAin+, combining AI with digitized artwork to help individuals express and manage chronic pain.',
+    logoColor: '#F0BEBA',
+    url: 'https://reporter.mcgill.ca/mcgill-researcher-teams-up-with-u-s-art-museum-to-enhance-understanding-of-chronic-pain/',
+  },
   {
     id: '1',
     title: '$50,000 Ignite Neuro Commercialization Grant Awarded',

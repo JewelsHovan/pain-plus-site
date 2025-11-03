@@ -114,6 +114,7 @@ export function About() {
                   name={member.name}
                   role={member.role}
                   bio={member.bio}
+                  image={member.image}
                 />
               </div>
             ))}
@@ -122,9 +123,9 @@ export function About() {
       </section>
 
       {/* Collaborations Section */}
-      <section className="snap-section snap-section-full pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-background via-secondary/5 to-background flex items-center justify-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+      <section className="snap-section snap-section-full pt-8 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-background via-secondary/5 to-background flex items-center justify-center">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
                 {ABOUT_CONTENT.collaboration.title}
@@ -135,7 +136,7 @@ export function About() {
             </div>
 
             <Card className="border-2 hover:border-primary/30 transition-all duration-500 shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-200">
-              <CardContent className="p-6 sm:p-8">
+              <CardContent className="px-8 py-6 sm:px-12 sm:py-8">
                 <div className="text-center mb-4 sm:mb-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-secondary/30 mb-3">
                     <Video className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
@@ -154,7 +155,7 @@ export function About() {
 
                 {/* Video Placeholder */}
                 {ABOUT_CONTENT.collaboration.partner.videoPlaceholder && (
-                  <div className="w-full h-48 sm:h-56 md:h-64 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
+                  <div className="w-full h-40 sm:h-44 md:h-48 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
                     <div className="text-center">
                       <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-background/80 flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
                         <Video className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />

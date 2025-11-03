@@ -46,29 +46,40 @@ export const HOME_CONTENT = {
 export const HOW_IT_WORKS_CONTENT = {
   hero: {
     title: 'How It Works',
-    subtitle: 'Our AI-powered platform in three simple steps',
+    subtitle: 'Transform your pain management journey in four steps',
   },
   steps: [
     {
       number: 1,
-      title: 'Client Assessment',
+      title: 'Express Your Pain',
       description:
-        'Our AI analyzes client needs, preferences, and therapeutic goals to create a personalized art therapy profile. We identify the most effective creative approaches for each individual.',
-      icon: 'ClipboardCheck',
+        'Describe how your pain feels using your own words. Whether it\'s sharp, throbbing, burning, or something entirely unique - our platform captures your experience.',
+      icon: 'Pencil',
+      image: '/enter_pain_desc.png',
     },
     {
       number: 2,
-      title: 'Personalized Sessions',
+      title: 'Visualize Your Experience',
       description:
-        'Receive customized art therapy session plans with guided activities, creative prompts, and therapeutic exercises tailored to your clients. Our platform adapts to their progress in real-time.',
-      icon: 'Palette',
+        'Our AI transforms your description into visual art using the National Gallery of Art\'s collection. See your pain represented through powerful imagery that communicates what words cannot.',
+      icon: 'Sparkles',
+      image: '/image_visualization.png',
     },
     {
       number: 3,
-      title: 'Progress Tracking',
+      title: 'Journal Your Daily Experience',
       description:
-        'Monitor therapeutic outcomes with comprehensive analytics. Track emotional wellness indicators, creative expression patterns, and therapeutic milestones over time.',
-      icon: 'TrendingUp',
+        'Record your daily thoughts, feelings, and pain experiences. Our smart journaling system captures the nuances of your journey in your own words.',
+      icon: 'BookOpen',
+      image: '/pain_journal.png',
+    },
+    {
+      number: 4,
+      title: 'Track Progress & Get AI Insights',
+      description:
+        'Visualize your pain patterns over time with comprehensive analytics. Our AI analyzes your journal entries and pain data to provide personalized tips and insights.',
+      icon: 'LineChart',
+      images: ['/weekly_overview_chart.png', '/ai_insights.png'],
     },
   ],
   cta: {
@@ -112,13 +123,15 @@ export const ABOUT_CONTENT = {
       education: 'PhD Candidate in Neuroscience, McGill University',
       bio: 'Founder of PAin+ with lived experience of chronic migraines and pelvic pain. Translating pain science into accessible digital tools.',
       funFact: '',
+      image: '/Hannah.jpg',
     },
     {
       name: 'Julien Hovan',
       role: 'Lead Software Developer',
       education: '',
-      bio: 'Add description here',
+      bio: 'Experience in Software and AI Engineering, loves NLP research and LLM Engineering.',
       funFact: '',
+      image: '/Julien_headshot.png',
     },
     {
       name: 'Patrick Chen',
@@ -126,6 +139,7 @@ export const ABOUT_CONTENT = {
       education: '',
       bio: 'Add description here',
       funFact: '',
+      image: '',
     },
     {
       name: 'Georges Chartrand',
@@ -133,6 +147,7 @@ export const ABOUT_CONTENT = {
       education: '',
       bio: 'Add description here',
       funFact: '',
+      image: '',
     },
   ],
   collaboration: {
