@@ -35,7 +35,7 @@ export function HowItWorks() {
                   controls
                   preload="metadata"
                 >
-                  <source src="/Video_F2025.mp4" type="video/mp4" />
+                  <source src={import.meta.env.VITE_VIDEO_URL || "https://your-azure-storage.blob.core.windows.net/videos/Video_F2025.mp4"} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 {/* Decorative corner accents */}
