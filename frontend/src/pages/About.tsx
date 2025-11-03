@@ -112,14 +112,13 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
             {team.map((member, index) => {
               // Map team member names to their image paths
               const imageMap: Record<string, string> = {
                 'Hannah Derue': '/Hannah.jpg',
                 'Julien Hovan': '/Julien_headshot.png',
                 'Patrick Chen': '/Patrick_hs.jpg',
-                'Georges Chartrand': '',
               };
 
               return (

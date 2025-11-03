@@ -19,7 +19,7 @@
   "home": {
     "hero": {
       "title": "Transforming Mental Wellness Through Art",
-      "subtitle": "AI-Powered Art Therapy Platform",
+      "subtitle": "From pain research to real-world relief",
       "cta": "Get Started"
     },
     "problem": {
@@ -154,12 +154,6 @@
         "role": "Team Member",
         "education": "",
         "bio": "McGill Undergraduate in Electrical Engineering, in robotics team"
-      },
-      {
-        "name": "Georges Chartrand",
-        "role": "Team Member",
-        "education": "",
-        "bio": "Add description here"
       }
     ],
     "collaboration": {
