@@ -43,13 +43,25 @@ export function ArticleCard({ article }: ArticleCardProps) {
 
             <Separator />
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
-            >
-              Read More
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            {article.url ? (
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            ) : (
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            )}
           </div>
         </div>
       </CardContent>

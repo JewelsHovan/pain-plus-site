@@ -61,13 +61,15 @@ export function HowItWorks() {
             index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
           }`}
         >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-12">
             <ProcessStep
               number={step.number}
               title={step.title}
               description={step.description}
               icon={step.icon}
               imagePosition={index % 2 === 0 ? 'right' : 'left'}
+              image={'image' in step ? step.image : undefined}
+              images={'images' in step ? step.images : undefined}
             />
           </div>
         </section>
