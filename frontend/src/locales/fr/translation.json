@@ -19,7 +19,7 @@
   "home": {
     "hero": {
       "title": "Transformer le bien-être mental par l'art",
-      "subtitle": "Plateforme d'art-thérapie alimentée par l'IA",
+      "subtitle": "De la recherche sur la douleur au soulagement dans le monde réel",
       "cta": "Commencer"
     },
     "problem": {
@@ -154,12 +154,6 @@
         "role": "Membre de l'équipe",
         "education": "",
         "bio": "Étudiant de premier cycle en génie électrique à McGill, dans l'équipe de robotique"
-      },
-      {
-        "name": "Georges Chartrand",
-        "role": "Membre de l'équipe",
-        "education": "",
-        "bio": "Ajouter une description ici"
       }
     ],
     "collaboration": {
