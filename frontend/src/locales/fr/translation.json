@@ -83,25 +83,29 @@
         "number": 1,
         "title": "Exprimez votre douleur",
         "description": "Décrivez comment vous ressentez votre douleur avec vos propres mots. Qu'elle soit aiguë, lancinante, brûlante ou quelque chose d'entièrement unique - notre plateforme capture votre expérience.",
-        "icon": "Pencil"
+        "icon": "Pencil",
+        "image": "/enter_pain_desc.png"
       },
       {
         "number": 2,
         "title": "Visualisez votre expérience",
         "description": "Notre IA transforme votre description en art visuel en utilisant la collection de la National Gallery of Art. Voyez votre douleur représentée à travers des images puissantes qui communiquent ce que les mots ne peuvent pas.",
-        "icon": "Sparkles"
+        "icon": "Sparkles",
+        "image": "/image_visualization.png"
       },
       {
         "number": 3,
         "title": "Journalisez votre expérience quotidienne",
         "description": "Enregistrez vos pensées, sentiments et expériences de douleur quotidiennes. Notre système de journalisation intelligent capture les nuances de votre parcours avec vos propres mots.",
-        "icon": "BookOpen"
+        "icon": "BookOpen",
+        "image": "/pain_journal.png"
       },
       {
         "number": 4,
         "title": "Suivez les progrès et obtenez des informations IA",
         "description": "Visualisez vos schémas de douleur au fil du temps avec des analyses complètes. Notre IA analyse vos entrées de journal et vos données de douleur pour fournir des conseils et des informations personnalisés.",
-        "icon": "LineChart"
+        "icon": "LineChart",
+        "images": ["/weekly_overview_chart.png", "/ai_insights.png"]
       }
     ],
     "cta": {
