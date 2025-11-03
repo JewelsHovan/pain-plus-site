@@ -1,9 +1,20 @@
 import { ProcessStep } from '@/components/how-it-works/ProcessStep';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { HOW_IT_WORKS_CONTENT, ROUTES } from '@/constants';
+import { ROUTES } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 export function HowItWorks() {
+  const { t } = useTranslation();
+  const steps = t('howItWorks.steps', { returnObjects: true }) as Array<{
+    number: number;
+    title: string;
+    description: string;
+    icon: string;
+    image?: string;
+    images?: string[];
+  }>;
+
   return (
     <div className="snap-scroll-page">
       {/* Video Section */}
@@ -23,7 +34,7 @@ export function HowItWorks() {
                 </svg>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-                See PAin+ in Action
+                {t('howItWorks.hero.title')}
               </h2>
             </div>
 
@@ -47,14 +58,14 @@ export function HowItWorks() {
             {/* Description below video */}
             <div className="text-center animate-in fade-in slide-in-from-bottom duration-700 delay-300">
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Watch how our platform transforms chronic pain management through innovative digital tools and evidence-based approaches
+                {t('howItWorks.hero.subtitle')}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
+      {steps.map((step, index) => (
         <section
           key={step.number}
           className={`snap-section snap-section-full flex items-center justify-center ${
@@ -68,8 +79,8 @@ export function HowItWorks() {
               description={step.description}
               icon={step.icon}
               imagePosition={index % 2 === 0 ? 'right' : 'left'}
-              image={'image' in step ? step.image : undefined}
-              images={'images' in step ? step.images : undefined}
+              image={step.image}
+              images={step.images}
             />
           </div>
         </section>
@@ -91,7 +102,7 @@ export function HowItWorks() {
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-center leading-tight">
-              {HOW_IT_WORKS_CONTENT.cta.title}
+              {t('howItWorks.cta.title')}
             </h2>
 
             {/* Subtext */}
@@ -107,7 +118,7 @@ export function HowItWorks() {
                 className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white font-semibold text-lg px-10 py-7 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <Link to={ROUTES.CONTACT} className="flex items-center gap-2">
-                  {HOW_IT_WORKS_CONTENT.cta.button}
+                  {t('howItWorks.cta.button')}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

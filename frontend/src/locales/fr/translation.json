@@ -1,0 +1,258 @@
+{
+  "common": {
+    "appName": "PAin+",
+    "nav": {
+      "home": "Accueil",
+      "howItWorks": "Comment ça marche",
+      "about": "À propos",
+      "newsMedia": "Actualités et médias",
+      "contact": "Contact"
+    },
+    "footer": {
+      "tagline": "Redéfinir la façon dont le monde traite et communique sur la douleur chronique",
+      "subtitle": "Outils fondés sur des données probantes et émotionnellement intelligents pour la gestion de la douleur chronique",
+      "location": "Montréal, QC",
+      "email": "hannah.derue@mcgill.ca",
+      "allRightsReserved": "Tous droits réservés."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Transformer le bien-être mental par l'art",
+      "subtitle": "Plateforme d'art-thérapie alimentée par l'IA",
+      "cta": "Commencer"
+    },
+    "problem": {
+      "title": "La thérapie traditionnelle manque d'accessibilité et d'expression créative personnalisée",
+      "description": "De nombreuses personnes à la recherche de soutien en santé mentale font face à des obstacles pour accéder à des services thérapeutiques de qualité.",
+      "statValue": "100M+",
+      "statLabel": "Adultes aux États-Unis vivant avec une douleur chronique"
+    },
+    "features": {
+      "sectionTitle": "Pourquoi Art Therapy Plus ?",
+      "sectionSubtitle": "Autonomiser les thérapeutes et les clients avec des outils alimentés par l'IA pour de meilleurs résultats",
+      "items": [
+        {
+          "title": "Identifier les clients",
+          "description": "Des outils d'évaluation alimentés par l'IA aident à identifier les personnes qui peuvent bénéficier de l'art-thérapie",
+          "icon": "Users"
+        },
+        {
+          "title": "Guider les séances",
+          "description": "Plans d'art-thérapie personnalisés adaptés aux besoins et objectifs uniques de chaque client",
+          "icon": "Target"
+        },
+        {
+          "title": "Autonomiser les thérapeutes",
+          "description": "Outils et ressources avancés pour soutenir l'expression thérapeutique créative",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Mesurer l'impact",
+          "description": "Suivre les progrès thérapeutiques avec des informations basées sur les données et des résultats mesurables",
+          "icon": "BarChart"
+        }
+      ]
+    },
+    "painPoints": [
+      {
+        "label": "Accès limité",
+        "description": "Barrières géographiques aux soins spécialisés de la douleur"
+      },
+      {
+        "label": "Coûts élevés",
+        "description": "Traitements coûteux souvent non couverts"
+      },
+      {
+        "label": "Longs délais d'attente",
+        "description": "Délais de plusieurs mois pour les rendez-vous"
+      },
+      {
+        "label": "Approche universelle",
+        "description": "Les approches génériques ne répondent pas aux besoins individuels"
+      }
+    ]
+  },
+  "howItWorks": {
+    "hero": {
+      "title": "Comment ça marche",
+      "subtitle": "Transformez votre parcours de gestion de la douleur en quatre étapes"
+    },
+    "steps": [
+      {
+        "number": 1,
+        "title": "Exprimez votre douleur",
+        "description": "Décrivez comment vous ressentez votre douleur avec vos propres mots. Qu'elle soit aiguë, lancinante, brûlante ou quelque chose d'entièrement unique - notre plateforme capture votre expérience.",
+        "icon": "Pencil"
+      },
+      {
+        "number": 2,
+        "title": "Visualisez votre expérience",
+        "description": "Notre IA transforme votre description en art visuel en utilisant la collection de la National Gallery of Art. Voyez votre douleur représentée à travers des images puissantes qui communiquent ce que les mots ne peuvent pas.",
+        "icon": "Sparkles"
+      },
+      {
+        "number": 3,
+        "title": "Journalisez votre expérience quotidienne",
+        "description": "Enregistrez vos pensées, sentiments et expériences de douleur quotidiennes. Notre système de journalisation intelligent capture les nuances de votre parcours avec vos propres mots.",
+        "icon": "BookOpen"
+      },
+      {
+        "number": 4,
+        "title": "Suivez les progrès et obtenez des informations IA",
+        "description": "Visualisez vos schémas de douleur au fil du temps avec des analyses complètes. Notre IA analyse vos entrées de journal et vos données de douleur pour fournir des conseils et des informations personnalisés.",
+        "icon": "LineChart"
+      }
+    ],
+    "cta": {
+      "title": "Prêt à transformer votre pratique ?",
+      "button": "Demander une démo"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À propos de nous",
+      "subtitle": "De la recherche sur la douleur au soulagement dans le monde réel – alimenté par les voix de ceux qui ont une expérience vécue"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "content": "Basée sur sa propre expérience de vie avec des migraines chroniques et des douleurs pelviennes, la fondatrice Hannah Derue (candidate au doctorat en neurosciences à l'Université McGill) a fondé PAin+. PAin+ est un programme logiciel qui traduit des décennies de science de la douleur en outils numériques accessibles qui aident les gens à mieux comprendre, exprimer et gérer leur douleur. Notre entreprise priorise les voix des membres de la communauté de la douleur chronique, les positionnant comme leaders dans notre orientation future. PAin+ se situe à l'intersection de l'art, des neurosciences et de l'apprentissage automatique, transformant la façon dont l'information sur la douleur chronique est communiquée, interprétée et traitée — du laboratoire de recherche au chevet du patient."
+    },
+    "mission": {
+      "title": "Énoncé de mission",
+      "content": "Chez PAin+, nous visons à redéfinir la façon dont le monde traite et communique sur la douleur chronique. Notre mission est d'autonomiser les individus et les cliniciens grâce à des outils fondés sur des données probantes et émotionnellement intelligents qui rendent l'expérience invisible de la douleur à la fois visible et exploitable.",
+      "belief": "Nous croyons qu'une gestion efficace de la douleur commence par une communication efficace — et qu'une communication améliorée favorise :",
+      "benefits": [
+        "Pratiques de pleine conscience cliniquement prouvées bénéfiques",
+        "Prise de décision clinique plus éclairée"
+      ]
+    },
+    "teamIntro": {
+      "title": "Notre équipe",
+      "subtitle": "Les preuves scientifiques sont accablantes – La gestion de la douleur chronique à son meilleur est interdisciplinaire.",
+      "description": "Notre équipe est construite autour de ce concept – avec des membres de l'équipe principale partageant une expertise en neurosciences fondamentales, gestion clinique de la douleur, santé mentale, conception d'expérience utilisateur et apprentissage automatique."
+    },
+    "team": [
+      {
+        "name": "Hannah Derue",
+        "role": "Fondatrice et PDG",
+        "education": "Candidate au doctorat en neurosciences, Université McGill",
+        "bio": "Fondatrice de PAin+ avec une expérience vécue de migraines chroniques et de douleurs pelviennes. Traduire la science de la douleur en outils numériques accessibles."
+      },
+      {
+        "name": "Julien Hovan",
+        "role": "Développeur logiciel principal",
+        "education": "",
+        "bio": "Expérience en ingénierie logicielle et IA, passionné par la recherche en TAL et l'ingénierie LLM."
+      },
+      {
+        "name": "Patrick Chen",
+        "role": "Membre de l'équipe",
+        "education": "",
+        "bio": "Étudiant de premier cycle en génie électrique à McGill, dans l'équipe de robotique"
+      },
+      {
+        "name": "Georges Chartrand",
+        "role": "Membre de l'équipe",
+        "education": "",
+        "bio": "Ajouter une description ici"
+      }
+    ],
+    "collaboration": {
+      "title": "Collaborations",
+      "subtitle": "En partenariat avec",
+      "partner": {
+        "name": "La National Gallery of Art",
+        "tagline": "L'expression créative comme véhicule de compréhension partagée",
+        "description": "Grâce à une collaboration unique avec la National Gallery of Art, nous intégrons la narration visuelle et l'interprétation émotionnelle dans notre plateforme de gestion de la douleur. Ensemble, nous explorons comment l'expression créative peut devenir une forme de thérapie, de perspicacité et de connexion.",
+        "disclaimer": "La National Gallery of Art offre des ressources en libre accès pour la recherche et le développement mais n'endosse ni ne promeut les produits qui pourraient résulter de l'utilisation d'œuvres d'art en libre accès de leur galerie."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Nous construisons l'avenir des soins de la douleur — rejoignez-nous."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "fields": {
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "organization": "Organisation",
+        "role": "Rôle",
+        "message": "Message"
+      },
+      "roles": [
+        "Clinicien",
+        "Chercheur",
+        "Patient/Individu",
+        "Administrateur de santé",
+        "Médias/Presse",
+        "Organisation partenaire",
+        "Autre"
+      ],
+      "submit": "Envoyer le message",
+      "success": "Merci ! Nous vous contacterons bientôt."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "email": "hannah.derue@mcgill.ca",
+      "phone": "",
+      "location": "Montréal, QC"
+    },
+    "partnerships": {
+      "title": "Médias et partenariats",
+      "description": "Pour les collaborations, partenariats ou demandes de presse, veuillez contacter :",
+      "email": "hannah.derue@mcgill.ca"
+    }
+  },
+  "newsMedia": {
+    "hero": {
+      "title": "Actualités et médias",
+      "subtitle": "Dernières mises à jour, annonces et couverture médiatique"
+    },
+    "filters": {
+      "all": "Tout",
+      "blog": "Blog",
+      "news": "Actualités",
+      "media": "Médias"
+    },
+    "loadMore": "Charger plus",
+    "articles": [
+      {
+        "id": "4",
+        "title": "Une chercheuse de McGill s'associe à un musée d'art américain pour améliorer la compréhension de la douleur chronique",
+        "category": "Media",
+        "date": "30 octobre 2025",
+        "excerpt": "Hannah Derue s'associe à la National Gallery of Art pour développer PAin+, combinant l'IA avec des œuvres d'art numérisées pour aider les individus à exprimer et gérer la douleur chronique.",
+        "logoColor": "#F0BEBA",
+        "url": "https://reporter.mcgill.ca/mcgill-researcher-teams-up-with-u-s-art-museum-to-enhance-understanding-of-chronic-pain/"
+      },
+      {
+        "id": "1",
+        "title": "Bourse de commercialisation Ignite Neuro de 50 000 $ attribuée",
+        "category": "News",
+        "date": "Automne 2025",
+        "excerpt": "PAin+ a été reconnue pour son excellence en neurosciences translationnelles et en innovation thérapeutique numérique.",
+        "logoColor": "#2E3780"
+      },
+      {
+        "id": "2",
+        "title": "Annonce de la collaboration avec la National Gallery of Art",
+        "category": "News",
+        "date": "Printemps 2025",
+        "excerpt": "Fusionner les neurosciences et l'art pour révolutionner la façon dont les patients expriment et comprennent la douleur.",
+        "logoColor": "#FF7500"
+      },
+      {
+        "id": "3",
+        "title": "Lauréat du prix d'innovation McGill (CLIC)",
+        "category": "News",
+        "date": "Hiver 2023",
+        "excerpt": "PAin+ reçoit un financement de démarrage pour développer la première plateforme de suivi de la douleur émotionnellement adaptative au monde.",
+        "logoColor": "#F0BEBA"
+      }
+    ]
+  }
+}

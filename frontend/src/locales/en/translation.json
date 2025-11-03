@@ -1,0 +1,258 @@
+{
+  "common": {
+    "appName": "PAin+",
+    "nav": {
+      "home": "Home",
+      "howItWorks": "How It Works",
+      "about": "About",
+      "newsMedia": "News & Media",
+      "contact": "Contact"
+    },
+    "footer": {
+      "tagline": "Redefining how the world treats and communicates about chronic pain",
+      "subtitle": "Evidence-based, emotionally intelligent tools for chronic pain management",
+      "location": "Montreal, QC",
+      "email": "hannah.derue@mcgill.ca",
+      "allRightsReserved": "All rights reserved."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Transforming Mental Wellness Through Art",
+      "subtitle": "AI-Powered Art Therapy Platform",
+      "cta": "Get Started"
+    },
+    "problem": {
+      "title": "Traditional therapy lacks accessibility and personalized creative expression",
+      "description": "Many individuals seeking mental health support face barriers to accessing quality therapeutic services.",
+      "statValue": "100M+",
+      "statLabel": "Adults in the US living with chronic pain"
+    },
+    "features": {
+      "sectionTitle": "Why Art Therapy Plus?",
+      "sectionSubtitle": "Empowering therapists and clients with AI-powered tools for better outcomes",
+      "items": [
+        {
+          "title": "Identify Clients",
+          "description": "AI-powered assessment tools help identify individuals who can benefit from art therapy",
+          "icon": "Users"
+        },
+        {
+          "title": "Guide Sessions",
+          "description": "Personalized art therapy plans tailored to each client's unique needs and goals",
+          "icon": "Target"
+        },
+        {
+          "title": "Empower Therapists",
+          "description": "Advanced tools and resources to support creative therapeutic expression",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Measure Impact",
+          "description": "Track therapeutic progress with data-driven insights and measurable outcomes",
+          "icon": "BarChart"
+        }
+      ]
+    },
+    "painPoints": [
+      {
+        "label": "Limited Access",
+        "description": "Geographic barriers to specialized pain care"
+      },
+      {
+        "label": "High Costs",
+        "description": "Expensive treatments often not covered"
+      },
+      {
+        "label": "Long Wait Times",
+        "description": "Months-long delays for appointments"
+      },
+      {
+        "label": "One-Size-Fits-All",
+        "description": "Generic approaches miss individual needs"
+      }
+    ]
+  },
+  "howItWorks": {
+    "hero": {
+      "title": "How It Works",
+      "subtitle": "Transform your pain management journey in four steps"
+    },
+    "steps": [
+      {
+        "number": 1,
+        "title": "Express Your Pain",
+        "description": "Describe how your pain feels using your own words. Whether it's sharp, throbbing, burning, or something entirely unique - our platform captures your experience.",
+        "icon": "Pencil"
+      },
+      {
+        "number": 2,
+        "title": "Visualize Your Experience",
+        "description": "Our AI transforms your description into visual art using the National Gallery of Art's collection. See your pain represented through powerful imagery that communicates what words cannot.",
+        "icon": "Sparkles"
+      },
+      {
+        "number": 3,
+        "title": "Journal Your Daily Experience",
+        "description": "Record your daily thoughts, feelings, and pain experiences. Our smart journaling system captures the nuances of your journey in your own words.",
+        "icon": "BookOpen"
+      },
+      {
+        "number": 4,
+        "title": "Track Progress & Get AI Insights",
+        "description": "Visualize your pain patterns over time with comprehensive analytics. Our AI analyzes your journal entries and pain data to provide personalized tips and insights.",
+        "icon": "LineChart"
+      }
+    ],
+    "cta": {
+      "title": "Ready to transform your practice?",
+      "button": "Request a Demo"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "From pain research to real-world relief – powered by the voices of those with lived experience"
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Based on her own experience living with chronic migraines and pelvic pain, founder Hannah Derue (PhD Candidate in Neuroscience at McGill University) founded PAin+. PAin+ is a software program that translates decades of pain science into accessible digital tools that help people better understand, express, and manage their pain. Our company prioritizes the voices of members of the chronic pain community, positioning them as leaders in our future direction. PAin+ sits at the intersection of art, neuroscience, and machine learning, transforming how chronic pain information is communicated, interpreted, and treated — from the research bench to the bedside."
+    },
+    "mission": {
+      "title": "Mission Statement",
+      "content": "At PAin+, we aim to redefine how the world treats and communicates about chronic pain. Our mission is to empower individuals and clinicians through evidence-based, emotionally intelligent tools that make the invisible experience of pain both visible and actionable.",
+      "belief": "We believe that effective pain management begins with effective communication — and that enhanced communication promotes:",
+      "benefits": [
+        "Clinically proven beneficial mindfulness practices",
+        "More informed clinician decision making"
+      ]
+    },
+    "teamIntro": {
+      "title": "Our Team",
+      "subtitle": "The scientific evidence is overwhelming – Chronic pain management at its finest is interdisciplinary.",
+      "description": "Our team is built around this concept – with core team members sharing expertise in fundamental neuroscience, clinical pain management, mental health, user experience design, and machine learning."
+    },
+    "team": [
+      {
+        "name": "Hannah Derue",
+        "role": "Founder & CEO",
+        "education": "PhD Candidate in Neuroscience, McGill University",
+        "bio": "Founder of PAin+ with lived experience of chronic migraines and pelvic pain. Translating pain science into accessible digital tools."
+      },
+      {
+        "name": "Julien Hovan",
+        "role": "Lead Software Developer",
+        "education": "",
+        "bio": "Experience in Software and AI Engineering, loves NLP research and LLM Engineering."
+      },
+      {
+        "name": "Patrick Chen",
+        "role": "Team Member",
+        "education": "",
+        "bio": "McGill Undergraduate in Electrical Engineering, in robotics team"
+      },
+      {
+        "name": "Georges Chartrand",
+        "role": "Team Member",
+        "education": "",
+        "bio": "Add description here"
+      }
+    ],
+    "collaboration": {
+      "title": "Collaborations",
+      "subtitle": "In partnership with",
+      "partner": {
+        "name": "The National Gallery of Art",
+        "tagline": "Creative expression as a vehicle for shared understanding",
+        "description": "Through a unique collaboration with the National Gallery of Art, we integrate visual storytelling and emotional interpretation into our pain management platform. Together, we explore how creative expression can become a form of therapy, insight, and connection.",
+        "disclaimer": "The National Gallery of Art offers open access resources for research and development but does not endorse or promote products that may arise from the use of open access artworks from their gallery."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "We're building the future of pain care — join us."
+    },
+    "form": {
+      "title": "Send us a message",
+      "fields": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "organization": "Organization",
+        "role": "Role",
+        "message": "Message"
+      },
+      "roles": [
+        "Clinician",
+        "Researcher",
+        "Patient/Individual",
+        "Healthcare Administrator",
+        "Media/Press",
+        "Partner Organization",
+        "Other"
+      ],
+      "submit": "Send Message",
+      "success": "Thank you! We'll be in touch soon."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "hannah.derue@mcgill.ca",
+      "phone": "",
+      "location": "Montreal, QC"
+    },
+    "partnerships": {
+      "title": "Media & Partnerships",
+      "description": "For collaborations, partnerships, or press inquiries, please reach out to:",
+      "email": "hannah.derue@mcgill.ca"
+    }
+  },
+  "newsMedia": {
+    "hero": {
+      "title": "News & Media",
+      "subtitle": "Latest updates, announcements, and press coverage"
+    },
+    "filters": {
+      "all": "All",
+      "blog": "Blog",
+      "news": "News",
+      "media": "Media"
+    },
+    "loadMore": "Load More",
+    "articles": [
+      {
+        "id": "4",
+        "title": "McGill researcher teams up with U.S. art museum to enhance understanding of chronic pain",
+        "category": "Media",
+        "date": "October 30, 2025",
+        "excerpt": "Hannah Derue partners with the National Gallery of Art to develop PAin+, combining AI with digitized artwork to help individuals express and manage chronic pain.",
+        "logoColor": "#F0BEBA",
+        "url": "https://reporter.mcgill.ca/mcgill-researcher-teams-up-with-u-s-art-museum-to-enhance-understanding-of-chronic-pain/"
+      },
+      {
+        "id": "1",
+        "title": "$50,000 Ignite Neuro Commercialization Grant Awarded",
+        "category": "News",
+        "date": "Fall 2025",
+        "excerpt": "PAin+ has been recognized for excellence in translational neuroscience and digital therapeutics innovation.",
+        "logoColor": "#2E3780"
+      },
+      {
+        "id": "2",
+        "title": "Collaboration with National Gallery of Art Announced",
+        "category": "News",
+        "date": "Spring 2025",
+        "excerpt": "Merging neuroscience and art to revolutionize how patients express and understand pain.",
+        "logoColor": "#FF7500"
+      },
+      {
+        "id": "3",
+        "title": "McGill Innovation Prize Winner (CLIC)",
+        "category": "News",
+        "date": "Winter 2023",
+        "excerpt": "PAin+ receives early-stage funding to develop the world's first emotionally adaptive pain-tracking platform.",
+        "logoColor": "#F0BEBA"
+      }
+    ]
+  }
+}

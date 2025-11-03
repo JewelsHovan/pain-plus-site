@@ -1,9 +1,18 @@
 import { TeamMember } from '@/components/about/TeamMember';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, BookOpen, Video } from 'lucide-react';
-import { ABOUT_CONTENT } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 export function About() {
+  const { t } = useTranslation();
+  const team = t('about.team', { returnObjects: true }) as Array<{
+    name: string;
+    role: string;
+    education: string;
+    bio: string;
+  }>;
+  const benefits = t('about.mission.benefits', { returnObjects: true }) as string[];
+
   return (
     <div className="snap-scroll-page">
       {/* Our Story Section */}
@@ -18,11 +27,11 @@ export function About() {
                     <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground">
-                    {ABOUT_CONTENT.story.title}
+                    {t('about.story.title')}
                   </h2>
                 </div>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  {ABOUT_CONTENT.story.content}
+                  {t('about.story.content')}
                 </p>
               </div>
 
@@ -55,19 +64,19 @@ export function About() {
                 <Target className="w-8 h-8 text-primary" />
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                {ABOUT_CONTENT.mission.title}
+                {t('about.mission.title')}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {ABOUT_CONTENT.mission.content}
+                {t('about.mission.content')}
               </p>
               <p className="text-lg font-medium text-foreground mb-8">
-                {ABOUT_CONTENT.mission.belief}
+                {t('about.mission.belief')}
               </p>
             </div>
 
             {/* Benefits Cards */}
             <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {ABOUT_CONTENT.mission.benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (
                 <Card
                   key={index}
                   className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom duration-700"
@@ -93,31 +102,41 @@ export function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">
-              {ABOUT_CONTENT.teamIntro.title}
+              {t('about.teamIntro.title')}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
-              {ABOUT_CONTENT.teamIntro.subtitle}
+              {t('about.teamIntro.subtitle')}
             </p>
             <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-              {ABOUT_CONTENT.teamIntro.description}
+              {t('about.teamIntro.description')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
-            {ABOUT_CONTENT.team.map((member, index) => (
-              <div
-                key={index}
-                className="animate-in fade-in slide-in-from-bottom duration-700"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <TeamMember
-                  name={member.name}
-                  role={member.role}
-                  bio={member.bio}
-                  image={member.image}
-                />
-              </div>
-            ))}
+            {team.map((member, index) => {
+              // Map team member names to their image paths
+              const imageMap: Record<string, string> = {
+                'Hannah Derue': '/Hannah.jpg',
+                'Julien Hovan': '/Julien_headshot.png',
+                'Patrick Chen': '/Patrick_hs.jpg',
+                'Georges Chartrand': '',
+              };
+
+              return (
+                <div
+                  key={index}
+                  className="animate-in fade-in slide-in-from-bottom duration-700"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <TeamMember
+                    name={member.name}
+                    role={member.role}
+                    bio={member.bio}
+                    image={imageMap[member.name] || ''}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -128,10 +147,10 @@ export function About() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom duration-700">
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                {ABOUT_CONTENT.collaboration.title}
+                {t('about.collaboration.title')}
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground">
-                {ABOUT_CONTENT.collaboration.subtitle}
+                {t('about.collaboration.subtitle')}
               </p>
             </div>
 
@@ -142,38 +161,36 @@ export function About() {
                     <Video className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
-                    {ABOUT_CONTENT.collaboration.partner.name}
+                    {t('about.collaboration.partner.name')}
                   </h3>
                   <p className="text-base sm:text-lg text-primary font-medium italic">
-                    {ABOUT_CONTENT.collaboration.partner.tagline}
+                    {t('about.collaboration.partner.tagline')}
                   </p>
                 </div>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-                  {ABOUT_CONTENT.collaboration.partner.description}
+                  {t('about.collaboration.partner.description')}
                 </p>
 
                 {/* Video Placeholder */}
-                {ABOUT_CONTENT.collaboration.partner.videoPlaceholder && (
-                  <div className="w-full h-40 sm:h-44 md:h-48 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
-                    <div className="text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-background/80 flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                        <Video className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
-                      </div>
-                      <p className="text-sm sm:text-base text-muted-foreground font-medium">
-                        NGA Collaboration Video
-                      </p>
-                      <p className="text-xs sm:text-sm text-muted-foreground/70">
-                        Coming Soon
-                      </p>
+                <div className="w-full h-40 sm:h-44 md:h-48 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group hover:from-muted/80 hover:to-muted/30 transition-all duration-300">
+                  <div className="text-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-background/80 flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Video className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
                     </div>
+                    <p className="text-sm sm:text-base text-muted-foreground font-medium">
+                      NGA Collaboration Video
+                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground/70">
+                      Coming Soon
+                    </p>
                   </div>
-                )}
+                </div>
 
                 {/* Disclaimer */}
                 <div className="bg-muted/30 rounded-lg p-4 sm:p-6 border-l-4 border-primary/50">
                   <p className="text-xs sm:text-sm text-muted-foreground italic leading-relaxed">
-                    {ABOUT_CONTENT.collaboration.partner.disclaimer}
+                    {t('about.collaboration.partner.disclaimer')}
                   </p>
                 </div>
               </CardContent>

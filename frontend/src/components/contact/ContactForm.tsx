@@ -12,10 +12,11 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent } from '@/components/ui/card';
-import { CONTACT_CONTENT, SITE_INFO } from '@/constants';
 import { Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function ContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,6 +25,8 @@ export function ContactForm() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+
+  const roles = t('contact.form.roles', { returnObjects: true }) as string[];
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -39,7 +42,7 @@ Message:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:${SITE_INFO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${t('contact.info.email')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
 
     setSubmitted(true);
@@ -55,19 +58,19 @@ ${formData.message}
               <Check className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-2">
-              {CONTACT_CONTENT.form.success}
+              {t('contact.form.success')}
             </h3>
             <p className="text-muted-foreground">
               Your email client should have opened. If not, please email us directly at{' '}
-              <a href={`mailto:${SITE_INFO.email}`} className="text-primary hover:underline">
-                {SITE_INFO.email}
+              <a href={`mailto:${t('contact.info.email')}`} className="text-primary hover:underline">
+                {t('contact.info.email')}
               </a>
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="name">{CONTACT_CONTENT.form.fields.name}</Label>
+              <Label htmlFor="name">{t('contact.form.fields.name')}</Label>
               <Input
                 id="name"
                 required
@@ -78,7 +81,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">{CONTACT_CONTENT.form.fields.email}</Label>
+              <Label htmlFor="email">{t('contact.form.fields.email')}</Label>
               <Input
                 id="email"
                 type="email"
@@ -90,7 +93,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="organization">{CONTACT_CONTENT.form.fields.organization}</Label>
+              <Label htmlFor="organization">{t('contact.form.fields.organization')}</Label>
               <Input
                 id="organization"
                 required
@@ -101,7 +104,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="role">{CONTACT_CONTENT.form.fields.role}</Label>
+              <Label htmlFor="role">{t('contact.form.fields.role')}</Label>
               <Select
                 value={formData.role}
                 onValueChange={(value) => setFormData({ ...formData, role: value })}
@@ -111,7 +114,7 @@ ${formData.message}
                   <SelectValue placeholder="Select your role" />
                 </SelectTrigger>
                 <SelectContent>
-                  {CONTACT_CONTENT.form.roles.map((role) => (
+                  {roles.map((role) => (
                     <SelectItem key={role} value={role}>
                       {role}
                     </SelectItem>
@@ -121,7 +124,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="message">{CONTACT_CONTENT.form.fields.message}</Label>
+              <Label htmlFor="message">{t('contact.form.fields.message')}</Label>
               <Textarea
                 id="message"
                 required
@@ -137,7 +140,7 @@ ${formData.message}
               size="lg"
               className="w-full bg-secondary hover:bg-secondary/90 text-foreground font-semibold"
             >
-              {CONTACT_CONTENT.form.submit}
+              {t('contact.form.submit')}
             </Button>
           </form>
         )}

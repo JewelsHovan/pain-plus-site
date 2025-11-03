@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { WaveDivider } from '@/components/layout/WaveDivider';
 import { Link } from 'react-router-dom';
-import { HOME_CONTENT, ROUTES } from '@/constants';
+import { ROUTES } from '@/constants';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative snap-section snap-section-full text-primary-foreground overflow-hidden flex items-center justify-center">
       {/* Background Image */}
@@ -23,7 +26,7 @@ export function HeroSection() {
           className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 animate-in fade-in slide-in-from-bottom-4 duration-1000"
         >
           <Link to={ROUTES.CONTACT} className="inline-flex items-center gap-2">
-            {HOME_CONTENT.hero.cta}
+            {t('home.hero.cta')}
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </Button>
