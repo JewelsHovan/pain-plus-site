@@ -83,25 +83,29 @@
         "number": 1,
         "title": "Express Your Pain",
         "description": "Describe how your pain feels using your own words. Whether it's sharp, throbbing, burning, or something entirely unique - our platform captures your experience.",
-        "icon": "Pencil"
+        "icon": "Pencil",
+        "image": "/enter_pain_desc.png"
       },
       {
         "number": 2,
         "title": "Visualize Your Experience",
         "description": "Our AI transforms your description into visual art using the National Gallery of Art's collection. See your pain represented through powerful imagery that communicates what words cannot.",
-        "icon": "Sparkles"
+        "icon": "Sparkles",
+        "image": "/image_visualization.png"
       },
       {
         "number": 3,
         "title": "Journal Your Daily Experience",
         "description": "Record your daily thoughts, feelings, and pain experiences. Our smart journaling system captures the nuances of your journey in your own words.",
-        "icon": "BookOpen"
+        "icon": "BookOpen",
+        "image": "/pain_journal.png"
       },
       {
         "number": 4,
         "title": "Track Progress & Get AI Insights",
         "description": "Visualize your pain patterns over time with comprehensive analytics. Our AI analyzes your journal entries and pain data to provide personalized tips and insights.",
-        "icon": "LineChart"
+        "icon": "LineChart",
+        "images": ["/weekly_overview_chart.png", "/ai_insights.png"]
       }
     ],
     "cta": {
