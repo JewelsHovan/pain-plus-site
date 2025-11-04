@@ -66,7 +66,7 @@ export function Logo({ className = '', showText = true, size = 'md' }: LogoProps
       {/* PAin+ Text */}
       {showText && (
         <span className={`${dimensions.text} font-bold text-foreground tracking-tight`}>
-          PAin<span className="text-accent">+</span>
+          P<span className="text-accent">Ai</span>n<span className="text-accent">+</span>
         </span>
       )}
     </div>
