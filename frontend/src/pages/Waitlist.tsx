@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { PageHero } from '@/components/common/PageHero';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   WaitlistForm,
@@ -18,12 +17,6 @@ export function Waitlist() {
 
   return (
     <div className="snap-scroll-page">
-      {/* Hero Section */}
-      <PageHero
-        title={WAITLIST_CONTENT.hero.title}
-        subtitle={WAITLIST_CONTENT.hero.subtitle}
-      />
-
       {/* Main Content */}
       <section className="snap-section snap-section-full bg-background flex items-center justify-center py-12 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -76,7 +76,7 @@ async function waitlistJoin(
       };
     }
 
-    // Honeypot check (if website field is filled, it's a bot)
+    // Honeypot check
     if (website) {
       context.log("Honeypot triggered - bot detected");
       return {
@@ -116,9 +116,7 @@ async function waitlistJoin(
     );
 
     // Create table if it doesn't exist
-    await tableClient.createTable().catch(() => {
-      // Table might already exist, that's fine
-    });
+    await tableClient.createTable().catch(() => {});
 
     // Check if email already exists
     try {
@@ -135,10 +133,9 @@ async function waitlistJoin(
       if (error.statusCode !== 404) {
         throw error;
       }
-      // Email doesn't exist - good, continue
     }
 
-    // Get current count to assign position
+    // Get current count
     const entities = tableClient.listEntities();
     let count = 0;
     for await (const _entity of entities) {
@@ -146,8 +143,6 @@ async function waitlistJoin(
     }
 
     const position = count + 1;
-
-    // Check if waitlist is full
     const isFull = count >= 100;
 
     // Create entity
@@ -168,7 +163,6 @@ async function waitlistJoin(
 
     context.log(`New signup: ${email} (Position: ${position})`);
 
-    // Success response
     return {
       status: 201,
       headers,

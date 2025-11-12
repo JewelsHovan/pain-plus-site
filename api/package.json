@@ -2,6 +2,7 @@
   "name": "painplus-api",
   "version": "1.0.0",
   "description": "Azure Functions API for PAin+ waitlist",
+  "main": "dist/src/functions/*.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",

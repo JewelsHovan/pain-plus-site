@@ -12,7 +12,7 @@ async function waitlistCount(
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
-    "Cache-Control": "public, max-age=30", // Cache for 30 seconds
+    "Cache-Control": "public, max-age=30",
   };
 
   // Handle OPTIONS preflight
@@ -31,7 +31,6 @@ async function waitlistCount(
 
     if (!connectionString) {
       context.error("Storage connection string not configured");
-      // Return 0 as fallback
       return {
         status: 200,
         headers,
@@ -49,10 +48,7 @@ async function waitlistCount(
       "WaitlistSignups"
     );
 
-    // Create table if doesn't exist
-    await tableClient.createTable().catch(() => {
-      // Table might already exist
-    });
+    await tableClient.createTable().catch(() => {});
 
     // Count entities
     const entities = tableClient.listEntities();
@@ -72,14 +68,14 @@ async function waitlistCount(
         count,
         max,
         remaining,
-        percentage: Math.round(percentage * 10) / 10, // Round to 1 decimal
+        percentage: Math.round(percentage * 10) / 10,
       },
     };
   } catch (error: any) {
     context.error("Error fetching waitlist count:", error);
 
     return {
-      status: 200, // Return 200 even on error with default values
+      status: 200,
       headers,
       jsonBody: {
         count: 0,
