@@ -23,34 +23,32 @@
       "cta": "Get Started"
     },
     "problem": {
-      "title": "Traditional therapy lacks accessibility and personalized creative expression",
-      "description": "Many individuals seeking mental health support face barriers to accessing quality therapeutic services.",
-      "statValue": "100M+",
-      "statLabel": "Adults in the US living with chronic pain"
+      "sectionTitle": "The Problem",
+      "title": "Chronic pain faces a two-fold problem. Unlike diabetes, where a glucose meter and insulin guide treatment, chronic pain has no biomarker — only patient questionnaires and medications that come with risky side effects. The closest thing that people have to a \"pain meter\" is their words. At Pain+, we think that leveraging LLMs to study linguistic patterns may unlock better understanding and treatment of chronic pain.",
+      "description": "We provide a unified platform that gives people living with chronic pain and their healthcare practitioners an evidence-based, drug-free approach to managing chronic pain.",
+      "statValue": "1.5B",
+      "statLabel": "People worldwide living with chronic pain"
     },
     "features": {
-      "sectionTitle": "Why Art Therapy Plus?",
-      "sectionSubtitle": "Empowering therapists and clients with AI-powered tools for better outcomes",
+      "sectionTitle": "Why Pain+?",
+      "sectionSubtitle": "",
       "items": [
         {
-          "title": "Identify Clients",
-          "description": "AI-powered assessment tools help identify individuals who can benefit from art therapy",
-          "icon": "Users"
+          "number": 1,
+          "title": "A novel multimodal self-expression platform for individuals",
+          "subItems": [
+            "Articulate your experience using written or visual inputs",
+            "Engage in evidence-based mindfulness practices",
+            "Gather data to track progress and changes to your pain experience over time"
+          ]
         },
         {
-          "title": "Guide Sessions",
-          "description": "Personalized art therapy plans tailored to each client's unique needs and goals",
-          "icon": "Target"
-        },
-        {
-          "title": "Empower Therapists",
-          "description": "Advanced tools and resources to support creative therapeutic expression",
-          "icon": "Sparkles"
-        },
-        {
-          "title": "Measure Impact",
-          "description": "Track therapeutic progress with data-driven insights and measurable outcomes",
-          "icon": "BarChart"
+          "number": 2,
+          "title": "Easy communication with your healthcare professional or others in your community",
+          "subItems": [
+            "Share your health data securely with your care team",
+            "Share with other members of your community using the application"
+          ]
         }
       ]
     },
@@ -95,15 +93,15 @@
       },
       {
         "number": 3,
-        "title": "Journal Your Daily Experience",
-        "description": "Record your daily thoughts, feelings, and pain experiences. Our smart journaling system captures the nuances of your journey in your own words.",
+        "title": "Engage in Evidence-Based Mindfulness Practices",
+        "description": "Review past entries to reflect on your chronic pain experience and how it has changed over time",
         "icon": "BookOpen",
         "image": "/pain_journal.png"
       },
       {
         "number": 4,
-        "title": "Track Progress & Get AI Insights",
-        "description": "Visualize your pain patterns over time with comprehensive analytics. Our AI analyzes your journal entries and pain data to provide personalized tips and insights.",
+        "title": "Track Progress and Gain AI Insights",
+        "description": "Receive concise and valuable insights about your pain experience. Using our proprietary \"pain lexicon\", gain insights to your linguistic patterns and receive personalized guidance on lifestyle modifications or habits that are beneficial to pain reduction.",
         "icon": "LineChart",
         "images": ["/weekly_overview_chart.png", "/ai_insights.png"]
       }
@@ -153,12 +151,12 @@
         "name": "Patrick Chen",
         "role": "Team Member",
         "education": "",
-        "bio": "McGill Undergraduate in Electrical Engineering, in robotics team"
+        "bio": "McGill Undergraduate in Electrical Engineering, McGill Rocket Team"
       }
     ],
     "collaboration": {
       "title": "Collaborations",
-      "subtitle": "In partnership with",
+      "subtitle": "",
       "partner": {
         "name": "The National Gallery of Art",
         "tagline": "Creative expression as a vehicle for shared understanding",

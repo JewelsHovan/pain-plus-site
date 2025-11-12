@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin, Shield } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import { ROUTES } from '@/constants';
 import { useTranslation } from 'react-i18next';
+import { Logo } from '@/components/common/Logo';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -13,25 +14,27 @@ export function Footer() {
           {/* Logo and Social */}
           <div className="flex flex-col gap-4">
             <Link to={ROUTES.HOME} className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary">p+</span>
+              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/15 transition-colors">
+                <Logo size="md" variant="light" />
               </div>
-              <span className="text-xl font-bold">{t('common.appName')}</span>
+              <span className="text-xl font-bold">
+                P<span className="text-[#FF7500]">ai</span>n+
+              </span>
             </Link>
 
             <div className="flex items-center gap-4 mt-2">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/painplus/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/15 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href={`mailto:${t('common.footer.email')}`}
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/15 transition-colors"
                 aria-label="Email"
               >
                 <Mail size={20} />
@@ -51,7 +54,7 @@ export function Footer() {
             <p className="text-sm">{t('common.footer.location')}</p>
           </div>
 
-          {/* Legal & Compliance */}
+          {/* Legal */}
           <div className="flex flex-col gap-2">
             <h3 className="font-bold text-lg mb-2">Legal</h3>
             <Link
@@ -60,10 +63,6 @@ export function Footer() {
             >
               Privacy Policy
             </Link>
-            <div className="mt-4 flex items-center gap-2">
-              <Shield size={20} className="text-secondary" />
-              <span className="text-sm font-medium">HIPAA Verified</span>
-            </div>
           </div>
         </div>
 

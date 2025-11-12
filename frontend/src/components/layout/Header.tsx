@@ -32,14 +32,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo with Text */}
           <Link to={ROUTES.HOME} className="flex items-center group transition-transform hover:scale-105">
-            <Logo showText={true} />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {NAV_LINKS.map((link, index) => {
               const isActive = location.pathname === link.path;
-              const navKeys = ['home', 'howItWorks', 'about', 'newsMedia'];
+              const navKeys = ['home', 'about', 'howItWorks', 'newsMedia'];
               return (
                 <Link
                   key={link.path}
@@ -87,7 +87,7 @@ export function Header() {
             <nav className="flex flex-col gap-4">
               {NAV_LINKS.map((link, index) => {
                 const isActive = location.pathname === link.path;
-                const navKeys = ['home', 'howItWorks', 'about', 'newsMedia'];
+                const navKeys = ['home', 'about', 'howItWorks', 'newsMedia'];
                 return (
                   <Link
                     key={link.path}
@@ -103,6 +103,7 @@ export function Header() {
               })}
               <div className="flex items-center gap-2 pt-2">
                 <LanguageToggle />
+                <DarkModeToggle />
               </div>
               <Button
                 asChild

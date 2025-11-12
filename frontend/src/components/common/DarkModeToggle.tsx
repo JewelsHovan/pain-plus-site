@@ -6,6 +6,8 @@ import { STORAGE_KEYS } from '@/constants';
 export function DarkModeToggle() {
   const [isDark, setIsDark] = useState(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.THEME);
+    // Default to dark mode for new users
+    if (stored === null) return true;
     return stored === 'dark';
   });
 
