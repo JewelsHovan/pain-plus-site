@@ -1,4 +1,4 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions";
+import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { TableClient } from "@azure/data-tables";
 
 // Email validation
@@ -31,10 +31,10 @@ const isRateLimited = (ip: string): boolean => {
   return false;
 };
 
-const httpTrigger: AzureFunction = async function (
-  context: Context,
-  req: HttpRequest
-): Promise<void> {
+async function waitlistJoin(
+  req: HttpRequest,
+  context: InvocationContext
+): Promise<HttpResponseInit> {
   context.log("Waitlist join request received");
 
   // CORS headers
@@ -47,57 +47,53 @@ const httpTrigger: AzureFunction = async function (
 
   // Handle OPTIONS preflight
   if (req.method === "OPTIONS") {
-    context.res = {
+    return {
       status: 200,
       headers,
       body: "",
     };
-    return;
   }
 
   try {
     // Parse request body
-    const { email, name, phone } = req.body || {};
+    const body = await req.json() as any;
+    const { email, name, phone, website } = body;
 
     // Validation
     if (!email || !name) {
-      context.res = {
+      return {
         status: 400,
         headers,
-        body: { error: "Email and name are required" },
+        jsonBody: { error: "Email and name are required" },
       };
-      return;
     }
 
     if (!isValidEmail(email)) {
-      context.res = {
+      return {
         status: 400,
         headers,
-        body: { error: "Invalid email format" },
+        jsonBody: { error: "Invalid email format" },
       };
-      return;
     }
 
     // Honeypot check (if website field is filled, it's a bot)
-    if (req.body.website) {
+    if (website) {
       context.log("Honeypot triggered - bot detected");
-      context.res = {
+      return {
         status: 400,
         headers,
-        body: { error: "Invalid submission" },
+        jsonBody: { error: "Invalid submission" },
       };
-      return;
     }
 
     // Rate limiting
-    const clientIp = (req.headers["x-forwarded-for"] as string) || "unknown";
+    const clientIp = req.headers.get("x-forwarded-for") || "unknown";
     if (isRateLimited(clientIp)) {
-      context.res = {
+      return {
         status: 429,
         headers,
-        body: { error: "Too many requests. Please try again in a minute." },
+        jsonBody: { error: "Too many requests. Please try again in a minute." },
       };
-      return;
     }
 
     // Initialize Table Storage client
@@ -106,13 +102,12 @@ const httpTrigger: AzureFunction = async function (
       process.env.AzureWebJobsStorage;
 
     if (!connectionString) {
-      context.log.error("Storage connection string not configured");
-      context.res = {
+      context.error("Storage connection string not configured");
+      return {
         status: 500,
         headers,
-        body: { error: "Server configuration error" },
+        jsonBody: { error: "Server configuration error" },
       };
-      return;
     }
 
     const tableClient = TableClient.fromConnectionString(
@@ -128,15 +123,14 @@ const httpTrigger: AzureFunction = async function (
     // Check if email already exists
     try {
       await tableClient.getEntity("waitlist", email.toLowerCase());
-      context.res = {
+      return {
         status: 409,
         headers,
-        body: {
+        jsonBody: {
           error: "This email is already on the waitlist",
           alreadyRegistered: true
         },
       };
-      return;
     } catch (error: any) {
       if (error.statusCode !== 404) {
         throw error;
@@ -175,10 +169,10 @@ const httpTrigger: AzureFunction = async function (
     context.log(`New signup: ${email} (Position: ${position})`);
 
     // Success response
-    context.res = {
+    return {
       status: 201,
       headers,
-      body: {
+      jsonBody: {
         success: true,
         position: position,
         isFull: isFull,
@@ -188,16 +182,21 @@ const httpTrigger: AzureFunction = async function (
       },
     };
   } catch (error: any) {
-    context.log.error("Error processing waitlist signup:", error);
+    context.error("Error processing waitlist signup:", error);
 
-    context.res = {
+    return {
       status: 500,
       headers,
-      body: {
+      jsonBody: {
         error: "Failed to process signup. Please try again.",
       },
     };
   }
-};
+}
 
-export default httpTrigger;
+app.http("waitlist-join", {
+  methods: ["POST", "OPTIONS"],
+  authLevel: "anonymous",
+  route: "waitlist/join",
+  handler: waitlistJoin,
+});

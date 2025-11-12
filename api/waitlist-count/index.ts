@@ -1,10 +1,10 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions";
+import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { TableClient } from "@azure/data-tables";
 
-const httpTrigger: AzureFunction = async function (
-  context: Context,
-  req: HttpRequest
-): Promise<void> {
+async function waitlistCount(
+  req: HttpRequest,
+  context: InvocationContext
+): Promise<HttpResponseInit> {
   context.log("Waitlist count request received");
 
   const headers = {
@@ -17,12 +17,11 @@ const httpTrigger: AzureFunction = async function (
 
   // Handle OPTIONS preflight
   if (req.method === "OPTIONS") {
-    context.res = {
+    return {
       status: 200,
       headers,
       body: "",
     };
-    return;
   }
 
   try {
@@ -31,19 +30,18 @@ const httpTrigger: AzureFunction = async function (
       process.env.AzureWebJobsStorage;
 
     if (!connectionString) {
-      context.log.error("Storage connection string not configured");
+      context.error("Storage connection string not configured");
       // Return 0 as fallback
-      context.res = {
+      return {
         status: 200,
         headers,
-        body: {
+        jsonBody: {
           count: 0,
           max: 100,
           remaining: 100,
           percentage: 0,
         },
       };
-      return;
     }
 
     const tableClient = TableClient.fromConnectionString(
@@ -67,10 +65,10 @@ const httpTrigger: AzureFunction = async function (
     const remaining = Math.max(max - count, 0);
     const percentage = Math.min((count / max) * 100, 100);
 
-    context.res = {
+    return {
       status: 200,
       headers,
-      body: {
+      jsonBody: {
         count,
         max,
         remaining,
@@ -78,12 +76,12 @@ const httpTrigger: AzureFunction = async function (
       },
     };
   } catch (error: any) {
-    context.log.error("Error fetching waitlist count:", error);
+    context.error("Error fetching waitlist count:", error);
 
-    context.res = {
+    return {
       status: 200, // Return 200 even on error with default values
       headers,
-      body: {
+      jsonBody: {
         count: 0,
         max: 100,
         remaining: 100,
@@ -91,6 +89,11 @@ const httpTrigger: AzureFunction = async function (
       },
     };
   }
-};
+}
 
-export default httpTrigger;
+app.http("waitlist-count", {
+  methods: ["GET", "OPTIONS"],
+  authLevel: "anonymous",
+  route: "waitlist/count",
+  handler: waitlistCount,
+});
