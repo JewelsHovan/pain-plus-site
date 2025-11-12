@@ -69,8 +69,8 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   if (status === 'success') {
     return (
-      <Card className="border-2 max-w-md mx-auto">
-        <CardContent className="p-8">
+      <Card className="border-2 h-full flex flex-col">
+        <CardContent className="p-8 flex-1 flex items-center justify-center">
           <div className="text-center py-8 space-y-4">
             <div className="flex justify-center">
               <div className="rounded-full bg-green-100 dark:bg-green-900 p-3">
@@ -96,8 +96,8 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
   }
 
   return (
-    <Card className="border-2 max-w-md mx-auto">
-      <CardContent className="p-8">
+    <Card className="border-2 h-full flex flex-col">
+      <CardContent className="p-8 flex-1">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="name">{WAITLIST_CONTENT.form.fields.name}</Label>

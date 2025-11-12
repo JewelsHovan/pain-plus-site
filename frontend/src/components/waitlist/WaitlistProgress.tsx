@@ -95,8 +95,8 @@ export function WaitlistProgress() {
   const urgency = getUrgencyMessage();
 
   return (
-    <Card className="border-2 bg-gradient-to-br from-primary/5 to-secondary/5">
-      <CardContent className="p-6 md:p-8">
+    <Card className="border-2 bg-gradient-to-br from-primary/5 to-secondary/5 h-full flex flex-col">
+      <CardContent className="p-6 md:p-8 flex-1 flex items-center justify-center">
         <div className="space-y-6">
           {/* Numeric indicator */}
           <div className="text-center">

@@ -16,9 +16,9 @@ export function Waitlist() {
   };
 
   return (
-    <div className="snap-scroll-page">
+    <div>
       {/* Main Content */}
-      <section className="snap-section snap-section-full bg-background flex items-center justify-center py-12 md:py-24">
+      <section className="bg-background flex items-center justify-center py-12 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Beta Message */}
@@ -33,11 +33,9 @@ export function Waitlist() {
               </CardContent>
             </Card>
 
-            {/* Progress Indicator */}
-            <WaitlistProgress key={refreshKey} />
-
-            {/* Registration Form */}
-            <div className="space-y-4">
+            {/* Form Section */}
+            <div className="space-y-8">
+              {/* Heading - centered above both columns */}
               <div className="text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   {WAITLIST_CONTENT.form.title}
@@ -46,7 +44,19 @@ export function Waitlist() {
                   {WAITLIST_CONTENT.form.description}
                 </p>
               </div>
-              <WaitlistForm onSuccess={handleSuccess} />
+
+              {/* Two Column Layout: Progress and Form */}
+              <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 items-stretch">
+                {/* Progress Indicator - first on mobile, second on desktop */}
+                <div className="order-1 lg:order-2">
+                  <WaitlistProgress key={refreshKey} />
+                </div>
+
+                {/* Registration Form - second on mobile, first on desktop */}
+                <div className="order-2 lg:order-1">
+                  <WaitlistForm onSuccess={handleSuccess} />
+                </div>
+              </div>
             </div>
 
             {/* Benefits Section */}
