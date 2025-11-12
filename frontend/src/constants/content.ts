@@ -213,3 +213,54 @@ export const CONTACT_CONTENT = {
     email: SITE_INFO.email,
   },
 } as const;
+
+export const WAITLIST_CONTENT = {
+  hero: {
+    title: 'Join the Waitlist',
+    subtitle:
+      'Be among the first to experience the future of chronic pain management',
+  },
+  beta: {
+    title: 'Exclusive Beta Access',
+    description:
+      'The first 100 people to register for our beta test will receive free lifetime access and join a community of individuals seeking to understand their chronic pain through a new lens and gain personalized insights for their wellbeing.',
+  },
+  form: {
+    title: 'Secure Your Spot',
+    description: 'Join the waitlist to get early access when we launch.',
+    fields: {
+      name: 'Full Name',
+      email: 'Email Address',
+      phone: 'Phone Number (optional)',
+    },
+    submit: 'Join the Waitlist',
+    submitting: 'Joining...',
+    success: "You're on the list!",
+    successMessage:
+      "Thank you for joining! We'll notify you as soon as we're ready to launch.",
+    alreadyRegistered: 'This email is already on the waitlist.',
+  },
+  benefits: {
+    title: 'What You Get',
+    items: [
+      {
+        icon: 'Sparkles',
+        title: 'Lifetime Free Access',
+        description:
+          'First 100 members get permanent access to all premium features',
+      },
+      {
+        icon: 'Users',
+        title: 'Founding Community',
+        description:
+          'Join an exclusive community of early adopters and pain management pioneers',
+      },
+      {
+        icon: 'Lightbulb',
+        title: 'Early Insights',
+        description:
+          'Be the first to access personalized insights for your wellbeing journey',
+      },
+    ],
+  },
+} as const;

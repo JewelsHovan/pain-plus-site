@@ -4,6 +4,7 @@ export const ROUTES = {
   ABOUT: '/about',
   NEWS_MEDIA: '/news-media',
   CONTACT: '/contact',
+  WAITLIST: '/waitlist',
 } as const;
 
 export const NAV_LINKS = [
