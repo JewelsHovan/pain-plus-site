@@ -1,7 +1,9 @@
 export const SITE_INFO = {
   name: 'PAin+',
-  tagline: 'Redefining how the world treats and communicates about chronic pain',
-  subtitle: 'Evidence-based, emotionally intelligent tools for chronic pain management',
+  tagline:
+    'Redefining how the world treats and communicates about chronic pain',
+  subtitle:
+    'Evidence-based, emotionally intelligent tools for chronic pain management',
   email: 'hannah.derue@mcgill.ca',
   phone: '',
   location: 'Montreal, QC',
@@ -15,29 +17,34 @@ export const HOME_CONTENT = {
     cta: 'Get Started',
   },
   problem: {
-    title: 'Traditional therapy lacks accessibility and personalized creative expression',
+    title:
+      'Traditional therapy lacks accessibility and personalized creative expression',
     description:
       'Many individuals seeking mental health support face barriers to accessing quality therapeutic services.',
   },
   features: [
     {
       title: 'Identify Clients',
-      description: 'AI-powered assessment tools help identify individuals who can benefit from art therapy',
+      description:
+        'AI-powered assessment tools help identify individuals who can benefit from art therapy',
       icon: 'Users',
     },
     {
       title: 'Guide Sessions',
-      description: 'Personalized art therapy plans tailored to each client\'s unique needs and goals',
+      description:
+        "Personalized art therapy plans tailored to each client's unique needs and goals",
       icon: 'Target',
     },
     {
       title: 'Empower Therapists',
-      description: 'Advanced tools and resources to support creative therapeutic expression',
+      description:
+        'Advanced tools and resources to support creative therapeutic expression',
       icon: 'Sparkles',
     },
     {
       title: 'Measure Impact',
-      description: 'Track therapeutic progress with data-driven insights and measurable outcomes',
+      description:
+        'Track therapeutic progress with data-driven insights and measurable outcomes',
       icon: 'BarChart',
     },
   ],
@@ -53,7 +60,7 @@ export const HOW_IT_WORKS_CONTENT = {
       number: 1,
       title: 'Express Your Pain',
       description:
-        'Describe how your pain feels using your own words. Whether it\'s sharp, throbbing, burning, or something entirely unique - our platform captures your experience.',
+        "Describe how your pain feels using your own words. Whether it's sharp, throbbing, burning, or something entirely unique - our platform captures your experience.",
       icon: 'Pencil',
       image: '/enter_pain_desc.png',
     },
@@ -61,7 +68,7 @@ export const HOW_IT_WORKS_CONTENT = {
       number: 2,
       title: 'Visualize Your Experience',
       description:
-        'Our AI transforms your description into visual art using the National Gallery of Art\'s collection. See your pain represented through powerful imagery that communicates what words cannot.',
+        "Our AI transforms your description into visual art using the National Gallery of Art's collection. See your pain represented through powerful imagery that communicates what words cannot.",
       icon: 'Sparkles',
       image: '/image_visualization.png',
     },
@@ -91,7 +98,8 @@ export const HOW_IT_WORKS_CONTENT = {
 export const ABOUT_CONTENT = {
   hero: {
     title: 'About Us',
-    subtitle: 'From pain research to real-world relief – powered by the voices of those with lived experience',
+    subtitle:
+      'From pain research to real-world relief – powered by the voices of those with lived experience',
   },
   story: {
     title: 'Our Story',
@@ -168,7 +176,7 @@ export const ABOUT_CONTENT = {
 export const CONTACT_CONTENT = {
   hero: {
     title: 'Contact',
-    subtitle: 'We\'re building the future of pain care — join us.',
+    subtitle: "We're building the future of pain care — join us.",
   },
   form: {
     title: 'Send us a message',
@@ -189,7 +197,7 @@ export const CONTACT_CONTENT = {
       'Other',
     ],
     submit: 'Send Message',
-    success: 'Thank you! We\'ll be in touch soon.',
+    success: "Thank you! We'll be in touch soon.",
   },
   info: {
     title: 'Contact Information',
@@ -200,7 +208,8 @@ export const CONTACT_CONTENT = {
   },
   partnerships: {
     title: 'Media & Partnerships',
-    description: 'For collaborations, partnerships, or press inquiries, please reach out to:',
+    description:
+      'For collaborations, partnerships, or press inquiries, please reach out to:',
     email: SITE_INFO.email,
   },
 } as const;

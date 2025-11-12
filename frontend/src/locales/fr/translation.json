@@ -23,34 +23,32 @@
       "cta": "Commencer"
     },
     "problem": {
-      "title": "La thérapie traditionnelle manque d'accessibilité et d'expression créative personnalisée",
-      "description": "De nombreuses personnes à la recherche de soutien en santé mentale font face à des obstacles pour accéder à des services thérapeutiques de qualité.",
-      "statValue": "100M+",
-      "statLabel": "Adultes aux États-Unis vivant avec une douleur chronique"
+      "sectionTitle": "Le problème",
+      "title": "La douleur chronique fait face à un double problème. Contrairement au diabète, où un glucomètre et l'insuline guident le traitement, la douleur chronique n'a pas de biomarqueur — seulement des questionnaires pour les patients et des médicaments qui comportent des effets secondaires risqués. La chose la plus proche d'un \"compteur de douleur\" que les gens ont, ce sont leurs mots. Chez Pain+, nous pensons que l'exploitation des LLM pour étudier les modèles linguistiques peut débloquer une meilleure compréhension et un meilleur traitement de la douleur chronique.",
+      "description": "Nous fournissons une plateforme unifiée qui offre aux personnes vivant avec une douleur chronique et à leurs praticiens de santé une approche fondée sur des preuves et sans médicaments pour gérer la douleur chronique.",
+      "statValue": "1,5 Md",
+      "statLabel": "Personnes dans le monde vivant avec une douleur chronique"
     },
     "features": {
-      "sectionTitle": "Pourquoi Art Therapy Plus ?",
-      "sectionSubtitle": "Autonomiser les thérapeutes et les clients avec des outils alimentés par l'IA pour de meilleurs résultats",
+      "sectionTitle": "Pourquoi Pain+ ?",
+      "sectionSubtitle": "",
       "items": [
         {
-          "title": "Identifier les clients",
-          "description": "Des outils d'évaluation alimentés par l'IA aident à identifier les personnes qui peuvent bénéficier de l'art-thérapie",
-          "icon": "Users"
+          "number": 1,
+          "title": "Une plateforme d'auto-expression multimodale novatrice pour les individus",
+          "subItems": [
+            "Articulez votre expérience en utilisant des entrées écrites ou visuelles",
+            "Engagez-vous dans des pratiques de pleine conscience fondées sur des données probantes",
+            "Collectez des données pour suivre les progrès et les changements dans votre expérience de la douleur au fil du temps"
+          ]
         },
         {
-          "title": "Guider les séances",
-          "description": "Plans d'art-thérapie personnalisés adaptés aux besoins et objectifs uniques de chaque client",
-          "icon": "Target"
-        },
-        {
-          "title": "Autonomiser les thérapeutes",
-          "description": "Outils et ressources avancés pour soutenir l'expression thérapeutique créative",
-          "icon": "Sparkles"
-        },
-        {
-          "title": "Mesurer l'impact",
-          "description": "Suivre les progrès thérapeutiques avec des informations basées sur les données et des résultats mesurables",
-          "icon": "BarChart"
+          "number": 2,
+          "title": "Communication facile avec votre professionnel de la santé ou d'autres membres de votre communauté",
+          "subItems": [
+            "Partagez vos données de santé en toute sécurité avec votre équipe de soins",
+            "Partagez avec d'autres membres de votre communauté en utilisant l'application"
+          ]
         }
       ]
     },
@@ -95,15 +93,15 @@
       },
       {
         "number": 3,
-        "title": "Journalisez votre expérience quotidienne",
-        "description": "Enregistrez vos pensées, sentiments et expériences de douleur quotidiennes. Notre système de journalisation intelligent capture les nuances de votre parcours avec vos propres mots.",
+        "title": "Engagez-vous dans des pratiques de pleine conscience fondées sur des preuves",
+        "description": "Passez en revue les entrées passées pour réfléchir à votre expérience de la douleur chronique et à la façon dont elle a changé au fil du temps",
         "icon": "BookOpen",
         "image": "/pain_journal.png"
       },
       {
         "number": 4,
         "title": "Suivez les progrès et obtenez des informations IA",
-        "description": "Visualisez vos schémas de douleur au fil du temps avec des analyses complètes. Notre IA analyse vos entrées de journal et vos données de douleur pour fournir des conseils et des informations personnalisés.",
+        "description": "Recevez des informations concises et précieuses sur votre expérience de la douleur. En utilisant notre « lexique de la douleur » exclusif, obtenez des informations sur vos modèles linguistiques et recevez des conseils personnalisés sur les modifications du mode de vie ou les habitudes bénéfiques pour la réduction de la douleur.",
         "icon": "LineChart",
         "images": ["/weekly_overview_chart.png", "/ai_insights.png"]
       }
@@ -158,7 +156,7 @@
     ],
     "collaboration": {
       "title": "Collaborations",
-      "subtitle": "En partenariat avec",
+      "subtitle": "",
       "partner": {
         "name": "La National Gallery of Art",
         "tagline": "L'expression créative comme véhicule de compréhension partagée",

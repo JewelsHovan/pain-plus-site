@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Pain+ - AI-Powered Art Therapy Platform for transforming mental wellness through creative expression" />
     <title>Pain+ | AI-Powered Art Therapy Platform</title>
+    <script>
+      // Prevent flash of light mode - apply dark mode immediately for new users
+      (function() {
+        const stored = localStorage.getItem('theme');
+        if (stored === null || stored === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

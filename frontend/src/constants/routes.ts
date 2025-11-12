@@ -8,7 +8,7 @@ export const ROUTES = {
 
 export const NAV_LINKS = [
   { path: ROUTES.HOME, label: 'Home' },
-  { path: ROUTES.HOW_IT_WORKS, label: 'How It Works' },
   { path: ROUTES.ABOUT, label: 'About' },
+  { path: ROUTES.HOW_IT_WORKS, label: 'How It Works' },
   { path: ROUTES.NEWS_MEDIA, label: 'News & Media' },
 ] as const;
