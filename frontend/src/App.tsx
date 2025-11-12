@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainLayout } from '@/layouts';
-import { Home, About, HowItWorks, NewsMedia, Contact, NotFound } from '@/pages';
+import { Home, About, HowItWorks, NewsMedia, Contact, Waitlist, NotFound } from '@/pages';
 import { ScrollToTop } from '@/components/common';
 import { ROUTES } from '@/constants';
 
@@ -15,6 +15,7 @@ function App() {
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.NEWS_MEDIA} element={<NewsMedia />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.WAITLIST} element={<Waitlist />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
