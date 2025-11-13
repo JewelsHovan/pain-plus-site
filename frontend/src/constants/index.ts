@@ -8,8 +8,9 @@ export * from './articles';
 
 export const APP_NAME = 'Pain+';
 
-export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
+// For production: uses '/api' (Azure SWA proxy)
+// For local dev: set VITE_API_BASE_URL in .env.local to 'http://localhost:7071/api'
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 export const STORAGE_KEYS = {
   THEME: 'theme',
