@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { WaveDivider } from '@/components/layout/WaveDivider';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants';
 import { ArrowRight } from 'lucide-react';
@@ -16,9 +15,6 @@ export function HeroSection() {
         style={{ backgroundImage: 'url(/Hero_img.png)' }}
       />
 
-      {/* Optional overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-transparent" />
-
       <div className="absolute bottom-16 sm:bottom-8 md:bottom-20 left-1/2 -translate-x-1/2 z-10 px-4 text-center w-full max-w-5xl">
         <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-2 duration-700">
           {t('home.hero.subtitle')}
@@ -34,7 +30,6 @@ export function HeroSection() {
           </Link>
         </Button>
       </div>
-      <WaveDivider color="#FFFFFF" />
     </section>
   );
 }
